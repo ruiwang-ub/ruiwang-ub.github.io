@@ -3,17 +3,15 @@ import { Fade, Slide } from "react-reveal";
 import Swal from 'sweetalert2';
 import emailjs from 'emailjs-com';
 
-const SERVICE_ID = "service_3yuvavk";
-const TEMPLATE_ID = "template_6uvud5d";
-const USER_ID = "-Dj7J4oZ6CMt-aF35";
+const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
+const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
+const USER_ID = process.env.REACT_APP_USER_ID;
 
 
 const Contact = ({data}) => {
   const form = useRef();
-
   const handleOnSubmit = (e) => {
     e.preventDefault();
-
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, USER_ID)
       .then((result) => {
         console.log(result.text);
