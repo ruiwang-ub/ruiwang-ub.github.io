@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import ParticlesBg from "particles-bg";
 import Fade from "react-reveal";
+import { SiGooglescholar, SiResearchgate } from 'react-icons/si';
 
 class Header extends Component {
   render() {
     if (!this.props.data) return null;
 
-    const project = this.props.data.project;
-    const github = this.props.data.github;
+    const googleScholar = this.props.data.googleScholar;
+    const researchgate = this.props.data.researchgate;
     const name = this.props.data.name;
     const description = this.props.data.description;
 
@@ -25,31 +26,31 @@ class Header extends Component {
 
           <ul id="nav" className="nav">
             <li className="current">
-              <a className="smoothscroll" href="#home">
+              <a className="smoothscroll hover" href="#home">
                 Home
               </a>
             </li>
 
             <li>
-              <a className="smoothscroll" href="#about">
+              <a className="smoothscroll hover" href="#about">
                 About
               </a>
             </li>
 
             <li>
-              <a className="smoothscroll" href="#resume">
+              <a className="smoothscroll hover" href="#resume">
                 Resume
               </a>
             </li>
 
             <li>
-              <a className="smoothscroll" href="#portfolio">
+              <a className="smoothscroll hover" href="#portfolio">
                 Works
               </a>
             </li>
 
             <li>
-              <a className="smoothscroll" href="#contact">
+              <a className="smoothscroll hover" href="#contact">
                 Contact
               </a>
             </li>
@@ -67,11 +68,11 @@ class Header extends Component {
             <hr />
             <Fade bottom duration={2000}>
               <ul className="social">
-                <a href={project} className="button btn project-btn">
-                  <i className="fa fa-book"></i>Project
+                <a href={googleScholar} className=" button btn googleScholar-btn">
+                <i><SiGooglescholar /></i>Google Scholor
                 </a>
-                <a href={github} className="button btn github-btn">
-                  <i className="fa fa-github"></i>Github
+                <a href={researchgate} className=" button btn researchgate-btn">
+                <i><SiResearchgate /></i>ResearchGate
                 </a>
               </ul>
             </Fade>

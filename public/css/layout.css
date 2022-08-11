@@ -125,15 +125,17 @@ header .scrolldown a:hover { color: #0762f9; }
 
 /* nav-wrap */
 #nav-wrap {
-   font: 12px 'opensans-bold', sans-serif;
+   font: 18px 'opensans-bold', sans-serif;
+   line-height: 64px;
    width: 100%;
    text-transform: uppercase;
-   letter-spacing: 2.5px;
+   letter-spacing: 4px;
    margin: 0 auto;
    z-index: 100;
    position: fixed;
    left: 0;
    top: 0;
+   background-color: rgba(0, 0, 0, .25);
 }
 .opaque { background-color: #333; }
 
@@ -141,16 +143,14 @@ header .scrolldown a:hover { color: #0762f9; }
 #nav-wrap > a.mobile-btn { display: none; }
 
 ul#nav {
-   min-height: 48px;
+   min-height: 64px;
    width: auto;
-
-   /* center align the menu */
    text-align: center;
 }
 ul#nav li {
    position: relative;
    list-style: none;
-   height: 48px;
+   height: 64px;
    display: inline-block;
 }
 
@@ -176,7 +176,19 @@ ul#nav li a {
 ul#nav li a:active { background-color: transparent !important; }
 ul#nav li.current a { color: #fe6928; }
 
-
+ .hover {
+   --s: 0.1em;   /* the thickness of the line */
+   --c: #fe6928; /* the color */
+      padding-bottom: var(--s);
+   background: 
+     linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
+     linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+   -webkit-background-clip: text,padding-box;
+           background-clip: text,padding-box;
+ }
+  .hover:hover {
+   --_p: 100%
+ }
 /* ------------------------------------------------------------------ */
 /* c. About Section
 /* ------------------------------------------------------------------ */
@@ -1005,7 +1017,11 @@ footer .social-links li:first-child { margin-left: 0; }
 }
 #go-top a:hover { background-color: #0F9095; }
 
-
+.social{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
 .social .btn:first-child{
    margin-right: 30px;
 }
@@ -1016,9 +1032,11 @@ footer .social-links li:first-child { margin-left: 0; }
 .social .btn i{
    margin-right: 15px;
 }
-.project-btn{
-   background-color: #1abc9c !important;
+.googleScholar-btn{
+   background-color: #1E88E5 !important;
+   border-radius: 10px;
 }
-.github-btn{
-   background-color: #34495e !important;
+.researchgate-btn{
+   background-color: #00cab9 !important;
+   border-radius: 10px;
 }
