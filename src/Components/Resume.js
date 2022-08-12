@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import Slide from "react-reveal";
 
+const boldText = (content, target) => {
+  return  content.replace(target, `<b>${target}</b>`);
+}
 class Resume extends Component {
   getRandomColor() {
     let letters = "0123456789ABCDEF";
@@ -41,6 +44,7 @@ class Resume extends Component {
       );
     });
 
+
     const skills = this.props.data.skills.map((skills) => {
       const backgroundColor = this.getRandomColor();
       const className = "bar-expand " + skills.name.toLowerCase();
@@ -51,6 +55,16 @@ class Resume extends Component {
           <span style={{ width, backgroundColor }} className={className}></span>
           <em>{skills.name}</em>
         </li>
+      );
+    });
+
+    const conference = this.props.data.conference.map(function (conference, index) {
+      return (
+        <div key={index}>
+          <p className="info" dangerouslySetInnerHTML={{__html: boldText(conference, 'Wang, R')}}>
+            
+          </p>
+        </div>
       );
     });
 
@@ -85,6 +99,17 @@ class Resume extends Component {
         </Slide>
 
         <Slide left duration={1300}>
+          <div className="row work">
+            <div className="three columns header-col">
+              <h1>
+                <span>Conference Presentations</span>
+              </h1>
+            </div>
+            <div className="nine columns main-col">{conference}</div>
+          </div>
+        </Slide>
+
+        <Slide left duration={1300}>
           <div className="row skill">
             <div className="three columns header-col">
               <h1>
@@ -94,7 +119,6 @@ class Resume extends Component {
 
             <div className="nine columns main-col">
               <p>{skillmessage}</p>
-
               <div className="bars">
                 <ul className="skills">{skills}</ul>
               </div>

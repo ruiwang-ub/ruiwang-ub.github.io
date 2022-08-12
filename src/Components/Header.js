@@ -14,8 +14,8 @@ class Header extends Component {
 
     return (
       <header id="home">
-        <ParticlesBg type="circle" bg={true} />
 
+        <ParticlesBg type="cobweb" bg={true} num={100} />
         <nav id="nav-wrap">
           <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
             Show navigation
@@ -63,16 +63,16 @@ class Header extends Component {
               <h1 className="responsive-headline">{name}</h1>
             </Fade>
             <Fade bottom duration={1200}>
-              {description.split('.').map((str, index) => (<h3 key={str+index}>{str}.</h3>))}
+              {description.split('.').map((str, index) => (<h3 key={str + index}>{str}.</h3>))}
             </Fade>
             <hr />
             <Fade bottom duration={2000}>
               <ul className="social">
-                <a href={googleScholar} className=" button btn googleScholar-btn">
-                <i><SiGooglescholar /></i>Google Scholor
+                <a href={googleScholar} className=" button btn googleScholar-btn hover-effect1">
+                  <i><SiGooglescholar /></i>Google Scholor
                 </a>
-                <a href={researchgate} className=" button btn researchgate-btn">
-                <i><SiResearchgate /></i>ResearchGate
+                <a href={researchgate} className=" button btn researchgate-btn hover-effect1">
+                  <i><SiResearchgate /></i>ResearchGate
                 </a>
               </ul>
             </Fade>

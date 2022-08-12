@@ -46,7 +46,7 @@
     ]
   },
   "resume":{
-    "skillmessage":"Here you can create a short write-up of your skills to show off to employers",
+    "skillmessage":"",
     "education":[
       {
         "school":"University at Buffalo, The State University of New York",
@@ -76,110 +76,64 @@
         "years":"2021 – Present"
       }
     ],
+    "conference":[
+      "Wang, R, Ophir, Y., Walter, D. (2022). Twitter Bots and Polarization of COVID-19 Vaccine. American Political Science Association, Montréal, Québec, Canada.",
+      "Wang, R, Ophir, Y. (2022). The Effect of Automated Journalism on Hostile Media Bias. American Political Science Association, Montréal, Québec, Canada.",
+      "Wang, R. (2022). How COVID19 Vaccine Content Attributes Relate to Engagement and Why it Matters on TikTok? Association for Education in Journalism and Mass Communication, Detroit, MI, United States.",
+      "Wang, R., Xu, X., Xie, X., Xu, W., Liu, Y., Liu, H. (2022). #PeriodPoverty, Networked Acknowledgement, and Connective Support: How a Peripheral Public Health Issue is Discussed on TikTok in China. International Association of Media and Communication Research, Beijing, China",
+      "Suk, J., Zhang, Y., Yue, Z., Wang, R., Dong, X., Yang, D., Lian, R., Kwak, N. (2022). “The personal is political”: A cross-platform approach to how networked acknowledgment before and after #MeToo transforms into politicization. International Communication Association, Paris, France.",
+      "Zhang, Y., Suk, J., An, Z., Yue, Z., Yang, D., Wang, R., Dong, X., Joseph, K., Kwak, N. (2022). Mapping out Information Flow in the Social Media Ecosystem by Tracing Hyperlinks. National Communication Association, New Orleans, Louisiana, United States. "
+    ],
     "skills":[
       {
+        "name":"Experimental design,",
+        "level":"80%"
+      },
+      {
+        "name":"Topic modeling",
+        "level":"80%"
+      },
+      {
+        "name":"R",
+        "level":"70%"
+      },
+      {
         "name":"Python",
+        "level":"70%"
+      },
+      {
+        "name":"SPSS",
         "level":"60%"
       },
       {
-        "name":"VueJs",
-        "level":"55%"
-      },
-      {
-        "name":"ReactJs",
+        "name":"Stata",
         "level":"50%"
       },
       {
-        "name":"CSS",
-        "level":"90%"
-      },
-      {
-        "name":"PHP",
-        "level":"80%"
-      },
-      {
-        "name":"Swift",
+        "name":"Automated text analysis,",
         "level":"50%"
-      },
-      {
-        "name":"JAVA",
-        "level":"80%"
       }
     ]
   },
   "portfolio":{
     "projects": [
       {
-        "title":"Canadian Wanderlust",
-        "category":"My Travel Blog for my post-university travels",
-        "image":"01.jpg",
-        "url":"https://www.canadianwanderlust.com"
+        "title":"AEJMC22 conference",
+        "category":"",
+        "image":"02.jpeg",
+        "url":""
       },
       {
-        "title":"Fury Fighting Gear",
-        "category":"(offline now) A fighting gear company I started",
-        "image":"02.jpg",
-        "url":"http://www.timbakerdev.com"
+        "title":"Teaching in China",
+        "category":"",
+        "image":"03.png",
+        "url":"https://chm.ahnu.edu.cn/info/1003/7520.html"
       },
       {
-        "title":"Original Thai Food",
-        "category":"Website I built for a restaurant I like in Thailand",
-        "image":"03.jpg",
-        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
-      },
-      {
-        "title":"Resume Website",
-        "category":"A React based resume website template",
-        "image":"04.jpg",
-        "url":"http://www.timbakerdev.com"
-      },
-      {
-        "title":"Smirkspace",
-        "category":"(MVP Only) A React and Meteor based chat University project.",
-        "image":"05.jpg",
-        "url":"http://www.smirkspace.com"
-      },
-      {
-        "title":"Canadian Wanderlust",
-        "category":"My Travel Blog for my post-university travels",
-        "image":"06.jpg",
-        "url":"https://www.canadianwanderlust.com"
-      },
-      {
-        "title":"Fury Fighting Gear",
-        "category":"(offline now) A fighting gear company I started",
-        "image":"01.jpg",
-        "url":"http://www.timbakerdev.com"
-      },
-      {
-        "title":"Original Thai Food",
-        "category":"Website I built for a restaurant I like in Thailand",
-        "image":"02.jpg",
-        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
-      },
-      {
-        "title":"Original Thai Food",
-        "category":"Website I built for a restaurant I like in Thailand",
-        "image":"03.jpg",
-        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
-      },
-      {
-        "title":"Resume Website",
-        "category":"A React based resume website template",
-        "image":"04.jpg",
-        "url":"http://www.timbakerdev.com"
-      },
-      {
-        "title":"Smirkspace",
-        "category":"(MVP Only) A React and Meteor based chat University project.",
-        "image":"05.jpg",
-        "url":"http://www.smirkspace.com"
-      },
-      {
-        "title":"Canadian Wanderlust",
-        "category":"My Travel Blog for my post-university travels",
-        "image":"06.jpg",
-        "url":"https://www.canadianwanderlust.com"
+        "title":"Teaching Assistant at Rutgers",
+        "category":"",
+        "image":"04.jpeg",
+        "url":""
       }
     ]
   }
