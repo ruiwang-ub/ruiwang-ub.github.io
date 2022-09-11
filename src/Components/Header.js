@@ -11,11 +11,12 @@ class Header extends Component {
     const researchgate = this.props.data.researchgate;
     const name = this.props.data.name;
     const description = this.props.data.description;
+    const profilepic = "images/" + this.props.data.image;
 
     return (
       <header id="home">
 
-        <ParticlesBg type="cobweb" bg={true} num={100} />
+        <ParticlesBg type="square" bg={true} num={20}/>
         <nav id="nav-wrap">
           <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
             Show navigation
@@ -39,13 +40,13 @@ class Header extends Component {
 
             <li>
               <a className="smoothscroll hover" href="#resume">
-                Resume
+                CV
               </a>
             </li>
 
             <li>
               <a className="smoothscroll hover" href="#portfolio">
-                Works
+                Projects
               </a>
             </li>
 
@@ -56,9 +57,18 @@ class Header extends Component {
             </li>
           </ul>
         </nav>
-
         <div className="row banner">
           <div className="banner-text">
+            <Fade bottom>
+              <div className="align-center three" style={{marginBottom: '20px'}}>
+                <img
+                  className="profile-pic"
+                  src={profilepic}
+                  alt="Wang Rui's image"
+                  style={{borderRadius: '20px'}}
+                />
+              </div>
+            </Fade>
             <Fade bottom>
               <h1 className="responsive-headline">{name}</h1>
             </Fade>
@@ -67,7 +77,7 @@ class Header extends Component {
             </Fade>
             <hr />
             <Fade bottom duration={2000}>
-              <ul className="social">
+              <ul className="social row phone-display" >
                 <a href={googleScholar} className=" button btn googleScholar-btn hover-effect1">
                   <i><SiGooglescholar /></i>Google Scholor
                 </a>

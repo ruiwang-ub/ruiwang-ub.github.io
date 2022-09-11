@@ -8,7 +8,6 @@ class About extends Component {
     if (!this.props.data) return null;
 
     const name = this.props.data.name;
-    const profilepic = "images/" + this.props.data.image;
     const bio = this.props.data.bio;
     const street = this.props.data.address.street;
     const city = this.props.data.address.city;
@@ -72,13 +71,6 @@ class About extends Component {
       <section id="about">
         <Fade duration={1000}>
           <div className="row">
-            <div className="three columns">
-              <img
-                className="profile-pic"
-                src={profilepic}
-                alt="Nordic Giant Profile Pic"
-              />
-            </div>
             <div className="nine columns main-col">
               <h2>About Me</h2>
               <p>{bio}</p>
