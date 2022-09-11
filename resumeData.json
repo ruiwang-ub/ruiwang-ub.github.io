@@ -1,7 +1,7 @@
 {
   "main": {
     "name":"Rui Wang",
-    "description":"I am a Doctoral (PhD) student at UB. Previously College Lecturer in School of Journalism and Communication at AHNU. Research Interest: Misinformation, media effect, narratives, social media, computational method",
+    "description":"I am a Doctoral (PhD) student at University at Buffalo. I study Political Communication, Media Trust, and Human-machine Communication.",
     "image":"profilepic.jpg",
     "bio":"Ph.D. student @CommDepUB | Media Effects, Misinformation, Computational Method, Human-machine Communication | @RutgersCommInfo Alumni|A mom🤱.",
     "contactmessage":"Look forward to hearing from you!",
@@ -67,12 +67,10 @@
     "work":[
       {
         "company":"The Media Effects, Misinformation, and Extremism Lab, University at Buffalo",
-        "title":"Research Assistant",
         "years":"2020 - Present"
       },
       {
         "company":"Communication and Emerging Media Lab, University at Buffalo",
-        "title":"Research Assistant",
         "years":"2021 – Present"
       }
     ],
@@ -118,19 +116,19 @@
   "portfolio":{
     "projects": [
       {
-        "title":"AEJMC22 conference",
+        "title":"Emerging Technology and Media Trust",
         "category":"",
         "image":"02.jpeg",
         "url":""
       },
       {
-        "title":"Teaching in China",
+        "title":"Social Bots in Online Enviornment",
         "category":"",
         "image":"03.png",
         "url":"https://chm.ahnu.edu.cn/info/1003/7520.html"
       },
       {
-        "title":"Teaching Assistant at Rutgers",
+        "title":"Perception of AI",
         "category":"",
         "image":"04.jpeg",
         "url":""

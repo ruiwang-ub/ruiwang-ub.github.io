@@ -114,13 +114,13 @@ header .scrolldown a {
    bottom: 30px;
    left: 50%;
    margin-left: -29px;
-   color: #fff;
    display: block;
    height: 42px;
    width: 42px;
    font-size: 42px;
    line-height: 42px;
-   color: #fff;
+   color: black;
+   z-index: 10;
    border-radius: 100%;
 
    -webkit-transition: all .3s ease-in-out;
@@ -1273,13 +1273,12 @@ footer .social-links li:first-child {
    justify-content: center;
 }
 
-.social .btn:first-child {
-   margin-right: 30px;
-}
 
 .social .btn {
    padding-left: 30px;
    padding-right: 30px;
+   border-radius: 10px;
+   margin:20px;
 }
 
 .social .btn i {
@@ -1288,10 +1287,25 @@ footer .social-links li:first-child {
 
 .googleScholar-btn {
    background-color: #1E88E5 !important;
-   border-radius: 10px;
 }
 
 .researchgate-btn {
    background-color: #00cab9 !important;
-   border-radius: 10px;
+}
+
+
+/* mobile narrow
+--------------------------------------------------------------- */
+@media only screen and (max-width: 460px) {
+
+   .phone-display{ 
+      display: flex;
+      flex-direction: column; 
+      justify-content: center;
+      align-items: center;
+   }
+
+   .social .btn {
+     width: 60%;
+   }
 }
