@@ -33,16 +33,6 @@
         "name":"linkedin",
         "url":"https://www.linkedin.com/in/rui-wang1993/",
         "className":"fa fa-linkedin"
-      },
-      {
-        "name":"instagram",
-        "url":"http://instagram.com/tbaker_x",
-        "className":"fa fa-instagram"
-      },
-      {
-        "name":"github",
-        "url":"https://github.com/wrui912data",
-        "className":"fa fa-github"
       }
     ]
   },
@@ -84,6 +74,13 @@
       "Suk, J., Zhang, Y., Yue, Z., Wang, R., Dong, X., Yang, D., Lian, R., Kwak, N. (2022). “The personal is political”: A cross-platform approach to how networked acknowledgment before and after #MeToo transforms into politicization. International Communication Association, Paris, France.",
       "Zhang, Y., Suk, J., An, Z., Yue, Z., Yang, D., Wang, R., Dong, X., Joseph, K., Kwak, N. (2022). Mapping out Information Flow in the Social Media Ecosystem by Tracing Hyperlinks. National Communication Association, New Orleans, Louisiana, United States. "
     ],
+    "publications":[
+      "Ophir, Y., Pruden, M. L., Walter, D., Lokmanoglu, A. D., Tebaldi, C., & Wang, R. (2022). Weaponizing reproductive rights: a mixed-method analysis of White nationalists’ discussion of abortions online. Information, Communication & Society, 1-26."
+    ],
+    "underReview":[
+      "Suk, J., Zhang, Y., Yue, Z., Wang, R., Dong, X., Yang, D., Lian, R., Kwak, N. (under review). When the Personal Becomes Political: Unpacking the Dynamics of Sexual Violence and Gender Justice Discourses across Four Social Media Platforms. ",
+      "Ophir, Y., Liu, A., Shah, P., Wang, R., Acosta, N., & Gillis, S. (under review). Science and Health Journalism and Its Effects on Audiences."
+    ],
     "skills":[
       {
         "name":"Experimental design,",
@@ -121,19 +118,22 @@
         "title":"Emerging Technology and Media Trust",
         "category":"",
         "image":"02.jpeg",
-        "url":""
+        "url":"",
+        "content": "The trust in news media hits historically low in the United States and other democratic countries. The declining tendency accelerated when Donald Trump became the president of the United States in 2016. This project is investigating whether AI can be a solution to the continuous decline of media trust."
       },
       {
         "title":"Social Bots in Online Enviornment",
         "category":"",
         "image":"03.png",
-        "url":"https://chm.ahnu.edu.cn/info/1003/7520.html"
+        "url":"https://chm.ahnu.edu.cn/info/1003/7520.html",
+        "content":"In recent years, social bots are active in online environments. Both the scholarship and the public are concerned that social bots could be detrimental to democratic society by spreading misinformation and heightening polarization. This project focuses on comparisons between humans and bots regarding the discourses and activities on Twitter. "
       },
       {
         "title":"Perception of AI",
         "category":"",
         "image":"04.jpeg",
-        "url":""
+        "url":"",
+        "content":"AI is employed as various actors in the communication process. For example, AI fact-checker, chatbots, AI journalists, and social bots. Instead of treating AI as a mere technological agency, nowadays, AI should be considered as a communicator as well. It is important to figure out how human perceive AI when it performs as an information source and when human interacts with it. This project centers around testing the human perceptions of AI in different settings."
       }
     ]
   }
