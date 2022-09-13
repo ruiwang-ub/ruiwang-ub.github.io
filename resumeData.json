@@ -5,7 +5,8 @@
     "image":"profilepic.jpg",
     "bio":"Ph.D. student @CommDepUB | Media Effects, Misinformation, Computational Method, Human-machine Communication | @RutgersCommInfo Alumni|A mom🤱.",
     "contactmessage":"Look forward to hearing from you!",
-    "email": "rwang38@ub.edu",
+    "email": "rwang38@buffalo.edu",
+    "twitter": "Summer912_",
     "phone": "555-555-5555",
     "googleScholar":"https://scholar.google.com/citations?user=ZysUK0kAAAAJ&hl=en",
     "researchgate":"https://www.researchgate.net/profile/Rui-Wang-23",
@@ -46,6 +47,7 @@
     ]
   },
   "resume":{
+    "resumedownload":"https://drive.google.com/file/d/1xZHdy1yDfMwzehzlzBy7zLoobBlVNBBc/view?usp=sharing",
     "skillmessage":"",
     "education":[
       {
