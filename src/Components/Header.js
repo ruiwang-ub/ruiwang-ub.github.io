@@ -60,7 +60,7 @@ class Header extends Component {
         <div className="row banner">
           <div className="banner-text">
             <Fade bottom>
-              <div className="align-center three" style={{marginBottom: '20px'}}>
+              <div className="align-center two" style={{marginBottom: '20px'}}>
                 <img
                   className="profile-pic"
                   src={profilepic}

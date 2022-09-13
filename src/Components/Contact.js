@@ -32,12 +32,6 @@ const Contact = ({data}) => {
 
   if (!data) return null;
 
-  const name = data.name;
-  const street = data.address.street;
-  const city = data.address.city;
-  const state = data.address.state;
-  const zip = data.address.zip;
-  // const phone = data.phone;
   const message = data.contactmessage;
 
   return (
@@ -50,7 +44,7 @@ const Contact = ({data}) => {
             </h1>
           </div>
 
-          <div className="ten columns">
+          <div className="eight columns">
             <p className="lead">{message}</p>
           </div>
         </div>
@@ -58,7 +52,7 @@ const Contact = ({data}) => {
 
       <div className="row">
         <Slide left duration={1000}>
-          <div className="eight columns">
+          <div className="twelve columns">
             <form ref={form} onSubmit={handleOnSubmit} >
               <fieldset>
                 <div>

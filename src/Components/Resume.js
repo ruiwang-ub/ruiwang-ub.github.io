@@ -2,11 +2,13 @@ import React, { Component } from "react";
 import Slide from "react-reveal";
 
 const boldText = (content, target) => {
-  return  content.replace(target, `<b>${target}</b>`);
+  return content.replace(target, `<b>${target}</b>`);
 }
 class Resume extends Component {
   render() {
     if (!this.props.data) return null;
+    console.log("this.props.data.resumedownload", this.props.data)
+    const resumeDownload = this.props.data.resumedownload;
 
     const education = this.props.data.education.map(function (education) {
       return (
@@ -37,8 +39,8 @@ class Resume extends Component {
     const conference = this.props.data.conference.map(function (conference, index) {
       return (
         <div key={index}>
-          <p className="info" dangerouslySetInnerHTML={{__html: boldText(conference, 'Wang, R')}}>
-            
+          <p className="info" dangerouslySetInnerHTML={{ __html: boldText(conference, 'Wang, R') }}>
+
           </p>
         </div>
       );
@@ -82,6 +84,18 @@ class Resume extends Component {
               </h1>
             </div>
             <div className="nine columns main-col">{conference}</div>
+          </div>
+        </Slide>
+        <Slide left duration={1300}>
+          <div className="row align-center download">
+            <p>
+              <a href={resumeDownload} className="button" target="_blank">
+                <i className="fa fa-download"></i>Download CV
+              </a>
+            </p>
+            <span>
+              <span></span>
+            </span>
           </div>
         </Slide>
       </section>
