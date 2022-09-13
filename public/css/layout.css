@@ -70,7 +70,7 @@ header .banner-text h1 {
 
 header .banner-text h3 {
    font: 18px/1.9em 'librebaskerville-regular', serif;
-   color: RGBA(0, 5, 36,0.8);
+   color: RGBA(0, 5, 36, 0.8);
    margin: 0 auto;
    width: 80%;
 }
@@ -252,7 +252,7 @@ ul#nav li.current a {
 }
 
 #about p {
-   word-wrap:break-word;
+   word-wrap: break-word;
    font: 24px 'opensans', sans-serif;
    letter-spacing: 1px;
    line-height: 2;
@@ -327,10 +327,16 @@ ul#nav li.current a {
    padding-right: 10%;
 }
 
-.education, .work {
+.education, .work, .title {
    margin-bottom: 48px;
    padding-bottom: 24px;
    border-bottom: 1px solid #E8E8E8;
+}
+
+.title h1 span {
+   font: 32px 'opensans-bold', sans-serif;
+   padding-bottom: 24px;
+   border-bottom: 3px solid #fe6928 ! important;
 }
 
 #resume .info {
@@ -362,8 +368,8 @@ ul#nav li.current a {
 
 #resume .download .button {
    margin-top: 6px;
-   background: rgba(0,0,0,.87);
-   color:white;
+   background: rgba(0, 0, 0, .87);
+   color: white;
    border-radius: 10px;
 }
 
@@ -523,181 +529,44 @@ ul#nav li.current a {
    padding-bottom: 60px;
 }
 
-#portfolio h1 {
-   font: 15px/24px 'opensans-semibold', sans-serif;
+#portfolio .portfolio-title {
+   display: flex;
+   justify-content: center;
+}
+
+#portfolio .portfolio-title h1 {
+   font: 32px 'opensans-bold', sans-serif;
    text-transform: uppercase;
    letter-spacing: 1px;
-   text-align: center;
-   margin-bottom: 48px;
-   color: #95A3A3;
-   font-size: 2rem;
+   line-height: 2;
+   margin-top: 0px;
+   padding-bottom: 12px;
+   margin-bottom: 12px !important;
+   border-bottom: 3px solid #fe6928 ! important;
+   width: 200px;
+   color: #313131;
 }
 
-/* Portfolio Content */
-#portfolio-wrapper .columns {
-   margin-bottom: 36px;
+#portfolio .project-container {
+   padding: 24px;
 }
 
-.portfolio-item .item-wrap {
-   background: #fff;
-   overflow: hidden;
-   position: relative;
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   width: 100%;
-   -webkit-transition: all 0.3s ease-in-out;
-   -moz-transition: all 0.3s ease-in-out;
-   -o-transition: all 0.3s ease-in-out;
-   -ms-transition: all 0.3s ease-in-out;
-   transition: all 0.3s ease-in-out;
-}
-
-.portfolio-item .item-wrap img {
-   height: 280px;
-   width: 100%;
-   object-fit: cover;
-}
-
-.portfolio-item .item-wrap a {
-   display: block;
-   cursor: pointer;
-}
-
-/* overlay */
-.portfolio-item .item-wrap .overlay {
-   position: absolute;
-   left: 0;
-   top: 0;
-   width: 100%;
-   height: 100%;
-
-   opacity: 0;
-   -moz-opacity: 0;
-   filter: alpha(opacity=0);
-
-   -webkit-transition: opacity 0.3s ease-in-out;
-   -moz-transition: opacity 0.3s ease-in-out;
-   -o-transition: opacity 0.3s ease-in-out;
-   transition: opacity 0.3s ease-in-out;
-
-   background: url(../images/overlay-bg.png) repeat;
-}
-
-.portfolio-item .item-wrap .link-icon {
-   display: block;
-   color: #fff;
-   height: 30px;
-   width: 30px;
-   font-size: 18px;
-   line-height: 30px;
-   text-align: center;
-
-   opacity: 0;
-   -moz-opacity: 0;
-   filter: alpha(opacity=0);
-
-   -webkit-transition: opacity 0.3s ease-in-out;
-   -moz-transition: opacity 0.3s ease-in-out;
-   -o-transition: opacity 0.3s ease-in-out;
-   transition: opacity 0.3s ease-in-out;
-
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   margin-left: -15px;
-   margin-top: -15px;
-}
-
-.portfolio-item .item-wrap img {
-   vertical-align: bottom;
-}
-
-.portfolio-item .portfolio-item-meta {
-   padding: 18px
-}
-
-.portfolio-item .portfolio-item-meta h5 {
-   font: 14px/21px 'opensans-bold', sans-serif;
-   color: #fff;
-}
-
-.portfolio-item .portfolio-item-meta p {
-   font: 12px/18px 'opensans-light', sans-serif;
-   color: #c6c7c7;
-   margin-bottom: 0;
-}
-
-/* on hover */
-.portfolio-item:hover .overlay {
-   opacity: 1;
-   -moz-opacity: 1;
-   filter: alpha(opacity=100);
-}
-
-.portfolio-item:hover .link-icon {
-   opacity: 1;
-   -moz-opacity: 1;
-   filter: alpha(opacity=100);
-}
-
-/* popup modal */
-.popup-modal {
-   max-width: 550px;
-   background: #fff;
-   position: relative;
-   margin: 0 auto;
-}
-
-.popup-modal .description-box {
-   padding: 12px 36px 18px 36px;
-}
-
-.popup-modal .description-box h4 {
-   font: 15px/24px 'opensans-bold', sans-serif;
-   margin-bottom: 12px;
-   color: #111;
-}
-
-.popup-modal .description-box p {
-   font: 14px/24px 'opensans-regular', sans-serif;
-   color: #A1A1A1;
-   margin-bottom: 12px;
-}
-
-.popup-modal .description-box .categories {
-   font: 11px/21px 'opensans-light', sans-serif;
-   color: #A1A1A1;
+#portfolio .project-title {
+   font: 18px/24px 'opensans-bold', sans-serif;
+   font-size: 24px;
    text-transform: uppercase;
-   letter-spacing: 2px;
-   display: block;
-   text-align: left;
+   letter-spacing: 1px;
+   line-height: 2;
+   padding: 12px 0;
 }
 
-.popup-modal .description-box .categories i {
-   margin-right: 8px;
-}
 
-.popup-modal .link-box {
-   padding: 18px 36px;
-   background: #111;
-   text-align: left;
-}
-
-.popup-modal .link-box a {
-   color: #fff;
-   font: 11px/21px 'opensans-bold', sans-serif;
-   text-transform: uppercase;
-   letter-spacing: 3px;
-   cursor: pointer;
-}
-
-.popup-modal a:hover {
-   color: #00CCCC;
-}
-
-.popup-modal a.popup-modal-dismiss {
-   margin-left: 24px;
+#portfolio .project-content {
+   font: 18px/24px 'opensans', sans-serif;
+   text-transform: none;
+   letter-spacing: 1px;
+   line-height: 2;
+   margin-top: 0px;
 }
 
 
@@ -1279,7 +1148,7 @@ footer .social-links li:first-child {
    padding-left: 30px;
    padding-right: 30px;
    border-radius: 10px;
-   margin:20px;
+   margin: 20px;
 }
 
 .social .btn i {
@@ -1299,17 +1168,18 @@ footer .social-links li:first-child {
 --------------------------------------------------------------- */
 @media only screen and (max-width: 460px) {
 
-   .phone-display{ 
+   .phone-display {
       display: flex;
-      flex-direction: column; 
+      flex-direction: column;
       justify-content: center;
       align-items: center;
    }
 
    .social .btn {
-     width: 60%;
+      width: 60%;
    }
+
    #about p {
-     font-size: 16px;
+      font-size: 16px;
    }
 }

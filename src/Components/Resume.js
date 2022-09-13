@@ -36,18 +36,27 @@ class Resume extends Component {
       );
     });
 
-    const conference = this.props.data.conference.map(function (conference, index) {
+    const getHTMLText = (conference, index) => {
       return (
         <div key={index}>
           <p className="info" dangerouslySetInnerHTML={{ __html: boldText(conference, 'Wang, R') }}>
-
           </p>
         </div>
       );
-    });
+    }
+    const conference = this.props.data.conference.map(getHTMLText);
+    const publications = this.props.data.publications.map(getHTMLText);
+    const underReview = this.props.data.underReview.map(getHTMLText);
 
     return (
       <section id="resume">
+        <Slide left duration={1300}>
+          <div className="row title align-center">
+            <h1>
+              <span>Curriculum vitae</span>
+            </h1>
+          </div>
+        </Slide>
         <Slide left duration={1300}>
           <div className="row education">
             <div className="three columns header-col">
@@ -63,24 +72,31 @@ class Resume extends Component {
             </div>
           </div>
         </Slide>
-
         <Slide left duration={1300}>
           <div className="row work">
             <div className="three columns header-col">
               <h1>
-                <span>Lab</span>
+                <span>Publications</span>
               </h1>
             </div>
-
-            <div className="nine columns main-col">{work}</div>
+            <div className="nine columns main-col">{publications}</div>
           </div>
         </Slide>
-
         <Slide left duration={1300}>
           <div className="row work">
             <div className="three columns header-col">
               <h1>
-                <span>Conference Presentations</span>
+                <span>Paper Under Review</span>
+              </h1>
+            </div>
+            <div className="nine columns main-col">{underReview}</div>
+          </div>
+        </Slide>
+        <Slide left duration={1300}>
+          <div className="row work">
+            <div className="three columns header-col">
+              <h1>
+                <span>Conference Papers</span>
               </h1>
             </div>
             <div className="nine columns main-col">{conference}</div>
