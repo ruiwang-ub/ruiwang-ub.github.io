@@ -158,11 +158,14 @@
 
    /* display menu panels */
 	#nav-wrap:target > ul#nav	{
-	   display: block;
-      padding: 30px 20px 48px 20px;
-      background: #1f2024;
-      margin: 0 30px;
+      display: block;
+      padding: 90px 20px 48px 20px;
+      background: rgba(31, 32, 36 , 0.9);
+      position: absolute;
+      top: 0;
+      left: 0;
       clear: both;
+      z-index: -2;
    }
 
    ul#nav li {
