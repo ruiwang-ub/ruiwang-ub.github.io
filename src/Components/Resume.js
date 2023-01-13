@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Slide from "react-reveal";
+import cv from "../assets/Wang_cv.pdf";
 
 const boldText = (content, target) => {
   return content.replace(target, `<b>${target}</b>`);
@@ -7,9 +8,6 @@ const boldText = (content, target) => {
 class Resume extends Component {
   render() {
     if (!this.props.data) return null;
-    console.log("this.props.data.resumedownload", this.props.data)
-    const resumeDownload = this.props.data.resumedownload;
-
     const education = this.props.data.education.map(function (education) {
       return (
         <div key={education.school}>
@@ -23,18 +21,18 @@ class Resume extends Component {
       );
     });
 
-    const work = this.props.data.work.map(function (work) {
-      return (
-        <div key={work.company}>
-          <h3>{work.company}</h3>
-          <p className="info">
-            {work.title}
-            <em className="date">{work.years}</em>
-          </p>
-          <p>{work.description}</p>
-        </div>
-      );
-    });
+    // const work = this.props.data.work.map(function (work) {
+    //   return (
+    //     <div key={work.company}>
+    //       <h3>{work.company}</h3>
+    //       <p className="info">
+    //         {work.title}
+    //         <em className="date">{work.years}</em>
+    //       </p>
+    //       <p>{work.description}</p>
+    //     </div>
+    //   );
+    // });
 
     const getHTMLText = (conference, index) => {
       return (
@@ -105,7 +103,7 @@ class Resume extends Component {
         <Slide left duration={1300}>
           <div className="row align-center download">
             <p>
-              <a href={resumeDownload} className="button" target="_blank">
+              <a href={cv} className="button" target="_blank">
                 <i className="fa fa-download"></i>Download CV
               </a>
             </p>

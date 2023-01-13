@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ParticlesBg from "particles-bg";
 import Fade from "react-reveal";
 import { SiGooglescholar, SiResearchgate } from 'react-icons/si';
+import cv from "../assets/Wang_cv.pdf";
 
 class Header extends Component {
   render() {
@@ -16,7 +17,7 @@ class Header extends Component {
     return (
       <header id="home">
 
-        <ParticlesBg type="square" bg={true} num={20}/>
+        <ParticlesBg type="square" bg={true} num={20} />
         <nav id="nav-wrap">
           <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
             Show navigation
@@ -58,37 +59,40 @@ class Header extends Component {
           </ul>
         </nav>
         <div className="row banner">
-          <div className="banner-text">
+          <div className="four columns">
             <Fade bottom>
-              <div className="align-center two" style={{marginBottom: '20px'}}>
+              <div className="align-center" style={{ marginBottom: '20px' }}>
                 <img
                   className="profile-pic"
                   src={profilepic}
                   alt="Wang Rui's image"
-                  style={{borderRadius: '20px'}}
+                  style={{ borderRadius: '20px' }}
                 />
               </div>
             </Fade>
-            <Fade bottom>
-              <h1 className="responsive-headline">{name}</h1>
-            </Fade>
-            <Fade bottom duration={1200}>
-              {description.split('.').map((str, index) => (<h3 key={str + index}>{str}.</h3>))}
-            </Fade>
-            <hr />
-            <Fade bottom duration={2000}>
-              <ul className="social row phone-display" >
-                <a href={googleScholar} className=" button btn googleScholar-btn hover-effect1">
-                  <i><SiGooglescholar /></i>Google Scholor
-                </a>
-                <a href={researchgate} className=" button btn researchgate-btn hover-effect1">
-                  <i><SiResearchgate /></i>ResearchGate
-                </a>
-              </ul>
-            </Fade>
+          </div>
+          <div className="eight columns">
+            <div className="banner-text">
+              <Fade bottom>
+                <h1 className="responsive-headline">{name}</h1>
+              </Fade>
+              <Fade bottom duration={1200}>
+                {description.split('.').map((str, index) => (<h3 key={str + index}>{str}.</h3>))}
+              </Fade>
+              <hr />
+              <Fade bottom duration={2000}>
+                <ul className="social row phone-display" >
+                  <a href={googleScholar} className=" button btn googleScholar-btn hover-effect1">
+                    <i><SiGooglescholar /></i>Google Scholor
+                  </a>
+                  <a href={researchgate} className=" button btn researchgate-btn hover-effect1">
+                    <i><SiResearchgate /></i>ResearchGate
+                  </a>
+                </ul>
+              </Fade>
+            </div>
           </div>
         </div>
-
         <p className="scrolldown">
           <a className="smoothscroll" href="#about">
             <i className="icon-down-circle"></i>
