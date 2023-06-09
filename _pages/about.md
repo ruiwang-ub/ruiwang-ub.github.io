@@ -35,5 +35,5 @@ The primary research methods I used are computational methods and experimental d
 
 I love teamwork. For scientific study, collective intelligence and endeavors are always the foremost credos. I am working closely with a group of great and smart scholars in the world. We have presented and published many interesting studies collaboratively. Please check [Meme lab](https://ophiryotam.com/lab.html) and [CEM lab](https://cemlab.github.io/)
 
-As for my personal life, I am a huge fan of music.I love singing and playing instruments.I am an Er - hu and keyboard player.Since I became a mom in 2020, my life centers on my little cute girl a lot.Her smile is my biggest motivation.Apart from that, I love workout, photography, traveling, and cooking.
+As for my personal life, I am a huge fan of music.I love singing and playing instruments.I am an Er - hu and keyboard player.Since I became a mom in 2020, my life centers on my little cute girl a lot.Her smile is my biggest motivation.Apart from that, I love workout, photography, traveling, and cooking. 
 
