@@ -1,0 +1,94 @@
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Rui Wang
+    - name: Date of Birth
+      value: 12th September 1993
+    - name: Languages
+      value: English, Chinese
+
+- title: Education
+  type: time_table
+  contents:
+    - title: PhD
+      institution: University at Buffalo, The State University of New York
+      year: Expected 2024
+    - title: M.A.
+      institution: Rutgers University – New Brunswick, The State University of New Jersey
+      year: 2018
+    - title: B.A.
+      institution: Anhui Normal University, China
+      year: 2016
+
+- title: Experience
+  type: time_table
+  contents:
+    - title: Graduate Assistantship
+      institution: University at Buffalo, Asia Research Institute
+      year: 2023.8 - Present
+    - title: Graduate Teaching Assistant
+      institution: University at Buffalo, Department of Communication
+      year: 2021.9 - 2023.8
+   
+
+    - title: Lecturer, Faculty
+      institution: Anhui Normal University, School of Journalism and Communication
+      year: 2018.7 – 2020.12
+
+    - title: Graduate Teaching Assistant
+      institution: Rutgers University - New Brunswick, School of Information and Communication
+      year: 2017.1 - 2018.5
+
+- title: Peer-Reviewed Publications
+  type: nested_list
+  contents:
+    - items: 'Hu, J., Wang, R. (2023) Negative Awareness versus Empowering Awareness: The Relationship between Dating App Usage and Algorithm Perceptions via Algorithm Awareness. International Journal of Human-Computer Interaction. [SSCI-indexed journal, 5Y IF: 4.503]'
+    - items: 'Wang. R., Regulating Platforms by Flew Terry [book review]. Mobile Media & Communication. [SSCI- indexed journal, 5Y IF: 4.107]'
+    - items: 'Suk, J., Zhang, Y., Yue, Z., Wang, R., Dong, X., Yang, D., Lian, R. (2023) When the Personal Becomes Political: Unpacking the Dynamics of Sexual Violence and Gender Justice Discourses across Four Social Media Platforms. Communication Research, 00936502231154146. [SSCI-indexed journal, 5Y IF: 5.708]'
+    - items: ' Ophir, Y., Pruden, M. L., Walter, D., Lokmanoglu, A. D., Tebaldi, C., & Wang, R. (2022). Weaponizing
+ reproductive rights: a mixed-method analysis of White nationalists’ discussion of abortions
+ online. Information, Communication & Society, 1-26 [SSCI-indexed journal, 5Y IF: 6.3]'
+
+- title: Papers Under Review
+  type: nested_list
+  contents:
+    - items: 'Wang, R., Suresh, S, Ophir, Y. (under review) The Growing Politicization of a Non-political Space: A Mixed- method Analysis of News App Reviews on Google Play between 2009-2022'
+    - items: 'Wang, R, Ophir, Y. (under review) Intentions to Engage with Automated Journalism: The Impact of Authorship Cues, Algorithmic Transparency, and Knowledge'
+    - items: 'Wang, R, Ophir, Y. (under review) Behind the Black Box: The Moderating Role of the Machine Heuristic on the Effect of Transparency Information about Automated Journalism on Hostile Media Bias Perception'
+    - items: 'Wang, R.,* Ophir, Y.,* Walter, D*. (R&R) Not All Bots Are Created Equal: The Impact of Bots Classification Techniques on Identification of Discursive Behaviors Around the Covid-19 Vaccine and Climate Change'
+
+- title: Book Chapters
+  type: nested_list
+  contents:
+   - items: 'Ophir, Y., Liu, A., Shah, P., Wang, R., Acosta, N., & Gillis, S. (Accepted, Exp. 2023). Science and Health Journalism and Its Effects on Audiences. In Walsh-Childers, K. & McKinnon, M. (Eds.). The Palgrave Handbook of Health and Science Journalism. Palgrave & McMillan Publishing.'
+
+- title: Work in Progress
+  type: nested_list
+  contents:
+    - items: 'Wang. R., Ophir, Y. (in preparation) The Politicization of Online Discourses Surrounding “Fast Fashion”: A Cross-Platform Study'
+    - items: 'Wang, R., Zhang, Y. (in preparation) Charismatic Leader, Populist Rhetoric, and Media Attention: How Traditional Media and Partisan Influencers on Twitter Responded to Trump’s Media Bashing'
+    - items: 'Wang, R, Nikolaev, A., Semenov, A., Ophir, Y. (in preparation) The Engagement Capacity and Influences of Twitter Bots During the 2022 U.S. Midterm Election.'
+    - items: 'Wang. R., Ophir, Y. (in preparation) Mitigating the Decline of News Trust: Examining the Efficacy of AI Fact Checkers in Defending Media Integrity Amidst Political Attacks'
+    - items: 'Wang, R., Zhang, Y., Suk, J., Levin, H. S. (in preparation) A Horn or Halo Effect of Elon Musk’s Twitter Buyout? User-dictated Governance and the Ebb and Flow of Digital Platforms.'
+    - items: 'Zhang, Y., Suk, J., Yue, Z., An, Z., Yang, D., Wang, R., Dong, X. & Joseph, K. (in preparation) Mapping out Information Flow in the Social Media Ecosystem by Tracing Hyperlinks.'
+
+
+- title: Peer-Reviewed Conference Papers and Presentations
+  type: nested_list
+  contents:
+    - items: 'Wang, R, Ophir, Y. (2023) Intentions to Engage with Automated Journalism: The Impact of Authorship Cues, Algorithmic Transparency, and Knowledge. Paper accepted for presentation at Association for Education in Journalism and Mass Communication, Washington, D.C., US.'
+    - items: 'Wang, R, Ophir, Y. (2023) Behind the Black Box: The Moderating Role of the Machine Heuristic on the Effect of Transparency Information about Automated Journalism on Hostile Media Bias Perception. Paper accepted for presentation at Association for Education in Journalism and Mass Communication, Washington, D.C., US.'
+    - items: 'Wang, R., Zhang, Y. (2023) How Traditional Media and Partisan Influencers on Twitter Responded to Trump’s Media Bashing. Paper accepted for presentation at American Political Science Association, Los Angeles, CA, US.'
+    - items: 'Wang, R, Nikolaev, A., Semenov, A., Ophir, Y. (2023) Examining the Influences of Twitter Bots During 2022 U.S. Midterm Election. Paper accepted for presentation at American Political Science Association, Los Angeles, CA, US.'
+    - items: 'Zhang, Y.,Suk, J., Wang, R., Levin, S.H. (2023) Elon Musk, Platform Ownership, User Participation, and the Governance of Twitter. Paper accepted for presentation at American Political Science Association, Los Angeles, CA, US.'
+    - items: 'Wang, R., Ophir, Y. (2023) An AI Shield from Political Attacks: Testing the Potential of Artificial Intelligence-Based Fact-checking to Ameliorate Distrust in Mainstream Media. Paper accepted for presentation at 73rd Annual International Communication Association Conference, Toronto, Ontario, Canada.'
+    - items: 'Wang, R., Suresh, S, Ophir, Y. (2023) News Apps as Identity Politics: A Mixed-Method Analysis of the Politicized Online Reviews about News Apps on Google Play and Apple Store. Paper accepted for presentation at 73rd Annual International Communication Association Conference, Toronto, Ontario, Canada.'
+    - items: 'Suk, J., Zhang, Y., Wang, R., Yang, D., Dong, X., Levin, S.H. & Seo, J. (2023) Fleeting Public Attention and Stubborn Partisan Passion: Politicization of #MeToo on Twitter. Paper accepted for presentation at 73rd Annual International Communication Association Conference, Toronto, Ontario, Canada.'
+    - items: 'Li, M., Suk, J., Sun, Y., Lian,R., Zhang, Y., Kwon, H., Wang, R., Dong, X., Pevehouse, J., Shah, D. (2023) A Cross-platform Analysis of 2017-2020 #MeToo on Twitter, Facebook, and Reddit. 73rd Annual International Communication Association Conference, Toronto, Ontario, presentation at Canada.'
+    - items: 'Wang, R, Ophir, Y., Walter, D. (2022). Twitter Bots and Polarization of COVID-19 Vaccine. Paper accepted for presentation at American Political Science Association, Montréal, Québec, Canada.'
+    - items: 'Wang, R, Ophir, Y. (2022). The Effect of Automated Journalism on Hostile Media Bias. Paper accepted for presentation at American Political Science Association, Montréal, Québec, Canada.'
+    - items: 'Wang, R. (2022). How COVID19 Vaccine Content Attributes Relate to Engagement and Why it Matters on TikTok? Paper accepted for presentation at Association for Education in Journalism and Mass Communication, Detroit, MI, US.'
+    - items: 'Wang, R., Xu, X., Xie, X., Xu, W., Liu, Y., Liu, H. (2022). Period Poverty: How a Peripheral Public Health Issue is Discussed on TikTok in China. Paper accepted for presentation at International Association of Media and Communication Research, Beijing, China'
+    - items: 'Suk, J., Zhang, Y., Yue, Z., Wang, R., Dong, X., Yang, D., Lian, R., Kwak, N. (2022). “The personal is political”: A cross-platform approach to how networked acknowledgment before and after #MeToo transforms into politicization. Paper accepted for presentation at International Communication Association, Paris, France.'
+    - items: 'Zhang, Y., Suk, J., An, Z., Yue, Z., Yang, D., Wang, R., Dong, X., Joseph, K., Kwak, N. (2022). Mapping out Information Flow in the Social Media Ecosystem by Tracing Hyperlinks. Paper accepted for presentation at National Communication Association, New Orleans, Louisiana, US.'
