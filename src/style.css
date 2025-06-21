@@ -1214,3 +1214,126 @@ html {
   outline: none !important;
   box-shadow: none !important;
 }
+
+/* Enhanced Loading Animation Styles */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  animation: loadingPulse 2s ease-in-out infinite;
+}
+
+@keyframes loadingPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 0.9;
+  }
+}
+
+.loading-dots {
+  display: flex;
+  gap: 8px;
+  margin-top: 1rem;
+}
+
+.loading-dots .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  animation: dotBounce 1.4s ease-in-out infinite both;
+}
+
+.loading-dots .dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.loading-dots .dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.loading-dots .dot:nth-child(3) {
+  animation-delay: 0s;
+}
+
+@keyframes dotBounce {
+  0%, 80%, 100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Enhanced Spinner Styling */
+.loading-container .spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border-width: 0.25em;
+  border-color: #667eea;
+  border-right-color: transparent;
+  animation: spinner-border 0.75s linear infinite;
+}
+
+@keyframes spinner-border {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Loading Text Animation */
+.loading-container h5 {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+  from {
+    filter: drop-shadow(0 0 5px rgba(102, 126, 234, 0.3));
+  }
+  to {
+    filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.6));
+  }
+}
+
+/* Responsive Loading Styles */
+@media (max-width: 768px) {
+  .loading-container {
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+  
+  .loading-container .spinner-border {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .loading-dots .dot {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .loading-container h5 {
+    font-size: 1.1rem;
+  }
+  
+  .loading-container p {
+    font-size: 0.9rem;
+  }
+}
