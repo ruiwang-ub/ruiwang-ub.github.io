@@ -1,52 +1,68 @@
 import React from "react";
 import {
-  AiFillGithub,
-  AiFillInstagram,
-} from "react-icons/ai";
-import { MdEmail } from "react-icons/md";
-import { FaLinkedinIn } from "react-icons/fa";
+  FaLinkedinIn,
+  FaGoogle,
+  FaResearchgate,
+  FaTwitter,
+  FaCloud,
+} from "react-icons/fa";
 
 function SocialMedia() {
   return (
     <ul className="home-about-social-links">
       <li className="social-icons">
         <a
-          href="https://github.com/sunilyadav8"
+          href="https://scholar.google.com/citations?user=ZysUK0kAAAAJ&hl=en"
           target="_blank"
           rel="noreferrer"
           className="icon-colour  home-social-icons"
+          title="Google Scholar"
         >
-          <AiFillGithub className="social-icon" />
+          <FaGoogle className="social-icon" />
         </a>
       </li>
       <li className="social-icons">
         <a
-          href="https://www.linkedin.com/in/sunilkumaryadav84/"
+          href="https://www.researchgate.net/profile/Rui-Wang-23"
           target="_blank"
           rel="noreferrer"
           className="icon-colour  home-social-icons"
+          title="ResearchGate"
+        >
+          <FaResearchgate className="social-icon" />
+        </a>
+      </li>
+      <li className="social-icons">
+        <a
+          href="https://bsky.app/profile/wangrui.bsky.social"
+          target="_blank"
+          rel="noreferrer"
+          className="icon-colour home-social-icons"
+          title="Bluesky"
+        >
+          <FaCloud className="social-icon" />
+        </a>
+      </li>
+      <li className="social-icons">
+        <a
+          href="https://x.com/Summer912_"
+          target="_blank"
+          rel="noreferrer"
+          className="icon-colour home-social-icons"
+          title="Twitter/X"
+        >
+          <FaTwitter className="social-icon" />
+        </a>
+      </li>
+      <li className="social-icons">
+        <a
+          href="https://www.linkedin.com/in/rui-wang1993/"
+          target="_blank"
+          rel="noreferrer"
+          className="icon-colour  home-social-icons"
+          title="LinkedIn"
         >
           <FaLinkedinIn className="social-icon" />
-        </a>
-      </li>
-      <li className="social-icons">
-        <a
-          href="https://www.instagram.com/sunil.yadav84/"
-          target="_blank"
-          rel="noreferrer"
-          className="icon-colour home-social-icons"
-        >
-          <AiFillInstagram className="social-icon" />
-        </a>
-      </li>
-      <li className="social-icons">
-        <a
-          href="mailto:sunilyadav8404@gmail.com"
-          target="_blank"
-          rel="noreferrer"
-          className="icon-colour home-social-icons"
-        >
-          <MdEmail className="social-icon" />
         </a>
       </li>
     </ul>
