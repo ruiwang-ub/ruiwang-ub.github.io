@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col, Badge } from "react-bootstrap";
-import { FaUser, FaLink, FaFilePdf, FaGithub } from "react-icons/fa";
+import { FaUser, FaLink, FaFilePdf, FaGithub, FaGraduationCap } from "react-icons/fa";
 import "./PublicationCard.css";
 
 const CitationBadge = ({ count }) => {
@@ -23,11 +23,11 @@ const CitationBadge = ({ count }) => {
 const PublicationCard = ({ pub }) => {
   return (
     <Row className="publication-card">
-      <Col md={1} className="pub-date-col">
+      <Col md={2} className="pub-date-col">
         <div className="pub-date">{pub.year}</div>
       </Col>
-      <Col md={9} className="pub-details-col">
-        <h5 className="pub-title">{pub.title}</h5>
+      <Col md={8} className="pub-details-col">
+        <h5 className="pub-title" style={{ textAlign: 'left' }}>{pub.title}</h5>
         <div className="pub-authors">
           {pub.authors.map((author, index) => (
             <span
@@ -43,6 +43,11 @@ const PublicationCard = ({ pub }) => {
           <em>{pub.venue}</em>
         </div>
         <div className="pub-links">
+          {pub.links.scholar && (
+            <a href={pub.links.scholar} target="_blank" rel="noopener noreferrer">
+              <FaGraduationCap /> Scholar
+            </a>
+          )}
           {pub.links.doi && (
             <a href={pub.links.doi} target="_blank" rel="noopener noreferrer">
               <FaLink /> DOI
