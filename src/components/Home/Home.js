@@ -185,10 +185,10 @@ function Home() {
                 Hi, I am <strong>Rui Wang</strong>!
               </h1>
               <p className="heading-description blockquote">
-                I am an incoming Assistant Professor in the Department of
-                Communication and Media at Loyola University Maryland. I am
-                currently a Ph.D. candidate in Communication at the University
-                at Buffalo. <strong>Welcome to my website!</strong>
+                I am an Assistant Professor in the Department of Communication
+                and Media at Loyola University Maryland. I received my Ph.D. in
+                Communication from the University at Buffalo.
+                <strong>Welcome to my website!</strong>
               </p>
 
               <p className="heading-description blockquote">
