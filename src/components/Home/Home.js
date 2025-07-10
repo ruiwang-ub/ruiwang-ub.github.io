@@ -1,119 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Card, Badge, Spinner } from "react-bootstrap";
+import { Container, Row, Col, Card, Badge } from "react-bootstrap";
 import myImg from "../../Assets/rui.jpg";
 import SocialMedia from "../SocialMedia";
 import TypeWriter from "./TypeWriter";
+import backupData from "../../data/scholar-data.json";
 
 function Home() {
-  const [scholarMetrics, setScholarMetrics] = useState({
-    publications: 14,
-    citations: 96,
-    hIndex: 5,
-    i10Index: 3,
-  });
+  const [scholarMetrics, setScholarMetrics] = useState(backupData.metrics);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Fetch Google Scholar metrics using SerpAPI
   useEffect(() => {
-    const fetchScholarMetrics = async () => {
-      try {
-        setIsLoading(true);
-
-        // Debug logging
-        console.log("Fetching scholar metrics...");
-
-        // For GitHub Pages deployment, we'll use a different approach
-        // Option 1: Use a public API proxy (for demo purposes)
-        // Option 2: Use cached data (recommended for production)
-
-        // For now, let's use cached data to avoid API key exposure
-        // In production, you should set up a proper backend or use a secure proxy
-
-        // Simulate API call delay
-
-        // Use cached/static data for GitHub Pages
-        const cachedData = {
-          cited_by: {
-            table: [
-              {
-                citations: {
-                  all: 96,
-                  since_2020: 96,
-                },
-              },
-              {
-                h_index: {
-                  all: 5,
-                  since_2020: 5,
-                },
-              },
-              {
-                i10_index: {
-                  all: 3,
-                  since_2020: 3,
-                },
-              },
-            ],
-          },
-          articles: [
-            // Sample articles data
-            { title: "Sample Publication 1" },
-            { title: "Sample Publication 2" },
-            // ... more articles
-          ],
-        };
-
-        console.log("Using cached scholar metrics data");
-
-        // Extract metrics from the cached data
-        if (cachedData.cited_by && cachedData.cited_by.table) {
-          const citationsData = cachedData.cited_by.table.find(
-            (item) => item.citations
-          );
-          const hIndexData = cachedData.cited_by.table.find(
-            (item) => item.h_index
-          );
-          const i10IndexData = cachedData.cited_by.table.find(
-            (item) => item.i10_index
-          );
-
-          setScholarMetrics({
-            publications: cachedData.articles ? cachedData.articles.length : 14,
-            citations: citationsData ? citationsData.citations.all : 96,
-            hIndex: hIndexData ? hIndexData.h_index.all : 5,
-            i10Index: i10IndexData ? i10IndexData.i10_index.all : 3,
-          });
-        } else {
-          throw new Error("Invalid data structure");
-        }
-
-        setError(null);
-      } catch (err) {
-        console.error("Error fetching scholar metrics:", err);
-        console.error("Error details:", {
-          name: err.name,
-          message: err.message,
-          stack: err.stack,
-        });
-        setError(err.message);
-
-        // Fallback to cached/default values
-        setScholarMetrics({
-          publications: 14,
-          citations: 96,
-          hIndex: 5,
-          i10Index: 3,
-        });
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchScholarMetrics();
+    // Load backup data immediately, no fetch required
+    setIsLoading(false);
+    setError(null);
   }, []);
 
-  // Updated news data
   const newsData = [
     {
       date: "5/2025",
@@ -172,7 +74,6 @@ function Home() {
           <Row className="align-items-center">
             <Col md={4} className="text-center mb-4 mb-md-0">
               <img src={myImg} className="profile-pic" alt="Rui Wang" />
-              {/* Social Media Links under photo */}
               <div className="profile-social-links mt-3">
                 <SocialMedia />
               </div>
@@ -184,14 +85,15 @@ function Home() {
               <h1 style={{ paddingBottom: 15 }} className="heading">
                 Hi, I am <strong>Rui Wang</strong>!
               </h1>
-              <p className="heading-description blockquote">
+
+              <p className="heading-description home-intro">
                 I am an Assistant Professor in the Department of Communication
                 and Media at Loyola University Maryland. I received my Ph.D. in
-                Communication from the University at Buffalo.
+                Communication from the University at Buffalo.{" "}
                 <strong>Welcome to my website!</strong>
               </p>
 
-              <p className="heading-description blockquote">
+              <p className="heading-description home-research">
                 My research program is built on three core pillars: (1)
                 examining the content, users, and effects of digital and news
                 media through the lens of identity politics and political
@@ -202,7 +104,7 @@ function Home() {
                 research.
               </p>
 
-              <p className="heading-description blockquote">
+              <p className="heading-description home-methods">
                 Methodologically, my research employs novel computational
                 methods, including natural language processing (e.g., LDA,
                 BERTopic), machine learning, network analysis, and quantitative
@@ -212,7 +114,7 @@ function Home() {
                 and leveraging LLMs to classify text and images.
               </p>
 
-              <p className="heading-description blockquote">
+              <p className="heading-description home-publications">
                 My work has been published in peer-reviewed journals such as{" "}
                 <em>Communication Research</em>, <em>New Media & Society</em>,{" "}
                 <em>Information, Communication & Society</em>,{" "}
@@ -221,7 +123,7 @@ function Home() {
                 <em>International Journal of Human-Computer Interaction</em>.
               </p>
 
-              <p className="heading-description blockquote">
+              <p className="heading-description home-personal">
                 I'm a proud mom of a sweet and beautiful four-year-old
                 daughter—being her assistant is basically my second full-time
                 job outside academia! These days, I'm helping her become a pro
@@ -255,91 +157,64 @@ function Home() {
                     </small>
                   </h3>
 
-                  {isLoading ? (
-                    <div className="text-center py-5">
-                      <div className="loading-container">
-                        <Spinner
-                          animation="border"
-                          role="status"
-                          variant="primary"
-                          size="lg"
-                          className="mb-3"
-                        >
-                          <span className="visually-hidden">Loading...</span>
-                        </Spinner>
-                        <h5 className="text-primary mb-2">
-                          Fetching Academic Data
-                        </h5>
-                        <p className="text-muted mb-3">
-                          Retrieving live metrics from Google Scholar...
-                        </p>
-                        <div className="loading-dots">
-                          <div className="dot"></div>
-                          <div className="dot"></div>
-                          <div className="dot"></div>
+                  {!isLoading && (
+                    <Row className="justify-content-center">
+                      <Col md={3} className="metric-item">
+                        <div className="metric-number">
+                          {scholarMetrics.publications}
+                        </div>
+                        <div className="metric-label">Publications</div>
+                      </Col>
+                      <Col md={3} className="metric-item">
+                        <div className="metric-number">
+                          {scholarMetrics.citations}
+                        </div>
+                        <div className="metric-label">Citations</div>
+                      </Col>
+                      <Col md={3} className="metric-item">
+                        <div className="metric-number">
+                          {scholarMetrics.hIndex}
+                        </div>
+                        <div className="metric-label">h-index</div>
+                      </Col>
+                      <Col md={3} className="metric-item">
+                        <div className="metric-number">
+                          {scholarMetrics.i10Index}
+                        </div>
+                        <div className="metric-label">i10-index</div>
+                      </Col>
+                    </Row>
+                  )}
+
+                  {error && (
+                    <div
+                      className="alert alert-info mt-4"
+                      role="alert"
+                      style={{
+                        background:
+                          "linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1))",
+                        border: "1px solid rgba(102, 126, 234, 0.3)",
+                        borderRadius: "15px",
+                        padding: "1rem 1.5rem",
+                      }}
+                    >
+                      <div className="d-flex align-items-center">
+                        <i
+                          className="fas fa-info-circle me-2"
+                          style={{ color: "#667eea" }}
+                        ></i>
+                        <div>
+                          <strong style={{ color: "#667eea" }}>
+                            Using Cached Data
+                          </strong>
+                          <br />
+                          <small className="text-muted">
+                            {error} Displaying last known metrics from Google
+                            Scholar.
+                          </small>
                         </div>
                       </div>
                     </div>
-                  ) : (
-                    <>
-                      <Row className="justify-content-center">
-                        <Col md={3} className="metric-item">
-                          <div className="metric-number">
-                            {scholarMetrics.publications}
-                          </div>
-                          <div className="metric-label">Publications</div>
-                        </Col>
-                        <Col md={3} className="metric-item">
-                          <div className="metric-number">
-                            {scholarMetrics.citations}
-                          </div>
-                          <div className="metric-label">Citations</div>
-                        </Col>
-                        <Col md={3} className="metric-item">
-                          <div className="metric-number">
-                            {scholarMetrics.hIndex}
-                          </div>
-                          <div className="metric-label">h-index</div>
-                        </Col>
-                        <Col md={3} className="metric-item">
-                          <div className="metric-number">
-                            {scholarMetrics.i10Index}
-                          </div>
-                          <div className="metric-label">i10-index</div>
-                        </Col>
-                      </Row>
-
-                      {error && (
-                        <div
-                          className="alert alert-info mt-4"
-                          role="alert"
-                          style={{
-                            background:
-                              "linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1))",
-                            border: "1px solid rgba(102, 126, 234, 0.3)",
-                            borderRadius: "15px",
-                            padding: "1rem 1.5rem",
-                          }}
-                        >
-                          <div className="d-flex align-items-center">
-                            <i
-                              className="fas fa-info-circle me-2"
-                              style={{ color: "#667eea" }}
-                            ></i>
-                            <div>
-                              <strong style={{ color: "#667eea" }}>
-                                Using Cached Data
-                              </strong>
-                              <br />
-                              <small className="text-muted">
-                                {error} Displaying last known metrics from
-                                Google Scholar.
-                              </small>
-                            </div>
-                          </div>
-                        </div>
-                      )}
-                    </>
                   )}
 
                   <div className="mt-3">

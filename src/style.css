@@ -34,20 +34,20 @@ html {
 }
 
 @media (max-width: 767px) {
-    #preloader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: 999999;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      margin: 0;
-      padding: 0;
+  #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999999;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -291,7 +291,43 @@ html {
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.95);
   margin-bottom: 20px;
-  text-align: justify;
+  text-align: left;
+}
+
+/* Reduce space under each heading‐description paragraph */
+.heading-description {
+  font-size: 1.2em;
+  line-height: 1.4; /* ↘ tighter lines */
+  margin-bottom: 1rem; /* ↘ less bottom space */
+  color: rgba(255, 255, 255, 0.9);
+  text-align: left;
+}
+
+/* Also tighten the specific “home-” sections */
+.home-intro,
+.home-research,
+.home-methods,
+.home-publications,
+.home-personal {
+  margin: 1.25rem 0; /* ↘ reduce top/bottom margins */
+  line-height: 1.8; /* ↘ consistent line spacing */
+}
+
+/* If you want them even denser on mobile: */
+@media (max-width: 767px) {
+  .heading-description {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 0.75rem;
+  }
+  .home-intro,
+  .home-research,
+  .home-methods,
+  .home-publications,
+  .home-personal {
+    margin: 1rem 0;
+    line-height: 1.8;
+  }
 }
 
 .heading-type {
@@ -1221,7 +1257,11 @@ html {
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  );
   border-radius: 20px;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -1230,7 +1270,8 @@ html {
 }
 
 @keyframes loadingPulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
     opacity: 1;
   }
@@ -1267,7 +1308,9 @@ html {
 }
 
 @keyframes dotBounce {
-  0%, 80%, 100% {
+  0%,
+  80%,
+  100% {
     transform: scale(0.8);
     opacity: 0.5;
   }
@@ -1317,21 +1360,21 @@ html {
     padding: 1.5rem;
     border-radius: 15px;
   }
-  
+
   .loading-container .spinner-border {
     width: 2.5rem;
     height: 2.5rem;
   }
-  
+
   .loading-dots .dot {
     width: 10px;
     height: 10px;
   }
-  
+
   .loading-container h5 {
     font-size: 1.1rem;
   }
-  
+
   .loading-container p {
     font-size: 0.9rem;
   }
