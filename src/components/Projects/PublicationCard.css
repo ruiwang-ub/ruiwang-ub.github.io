@@ -45,8 +45,8 @@
 }
 
 .author-bold {
-    font-weight: bold;
-    color: #000;
+  font-weight: bold;
+  color: #000;
 }
 
 .pub-venue {
@@ -71,11 +71,11 @@
 }
 
 .pub-tags {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .pub-tags .badge {
-    margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .pub-citation-col {
@@ -108,4 +108,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-} 
+}
+
+@media (max-width: 767px) {
+  .publication-card {
+    padding: 1rem 0;
+  }
+  .pub-date-col {
+    padding-bottom: 1rem;
+  }
+}

@@ -261,6 +261,16 @@ html {
   height: 100%;
 }
 
+html, body, #root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 .home-header {
   padding-top: 12px !important;
 }
@@ -269,12 +279,22 @@ html {
   padding: 100px 0;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
   display: flex;
   align-items: center;
+  overflow-x: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .home-content {
   padding: 40px 20px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .heading {
@@ -327,6 +347,12 @@ html {
   .home-personal {
     margin: 1rem 0;
     line-height: 1.8;
+  }
+
+  .heading-type {
+    padding-left: 0;
+    text-align: left;
+    padding-bottom: 1rem;
   }
 }
 
@@ -928,7 +954,11 @@ html {
   border: none;
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #f8f9fa 100%
+  );
   transition: all 0.3s ease;
 }
 
