@@ -14,8 +14,7 @@ const path = require("path");
 const outputPath = path.resolve(__dirname, '../src/data/scholar-data.json');
 
 // Configuration - API key must be set as environment variable
-const API_KEY =
-  "93cff999c9a6ad4694d9cbfda40aee184040e9cef15d805d2b5aac3e0d0442d3";
+const API_KEY = process.env.SERPAPI_KEY;
 const AUTHOR_ID = "ZysUK0kAAAAJ";
 
 // Check if API key is provided
