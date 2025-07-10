@@ -1,40 +1,40 @@
-name: Build & Publish to GitHub Pages
+# name: Build & Publish to GitHub Pages
 
-on:
-  push:
-    branches: [new-dev]
+# on:
+#   push:
+#     branches: [new-dev]
 
-jobs:
-  build_and_deploy:
-    runs-on: ubuntu-latest
+# jobs:
+#   build_and_deploy:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          persist-credentials: false # allow pushing
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v4
+#         with:
+#           persist-credentials: false # allow pushing
 
-      - name: Use Node.js 18
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
+#       - name: Use Node.js 18
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: 18
 
-      - name: Install dependencies
-        run: npm ci
+#       - name: Install dependencies
+#         run: npm ci
 
-      - name: Build production assets
-        run: npm run build
+#       - name: Build production assets
+#         run: npm run build
 
-      - name: Move build into branch root
-        run: |
-          git rm -rf .         # remove all existing files
-          cp -R build/* ./     # copy compiled app into root
-          echo "www.ruiwangcomm.com" > CNAME  # if using custom domain
+#       - name: Move build into branch root
+#         run: |
+#           git rm -rf .         # remove all existing files
+#           cp -R build/* ./     # copy compiled app into root
+#           echo "www.ruiwangcomm.com" > CNAME  # if using custom domain
 
-      - name: Commit and push to new-dev
-        uses: EndBug/add-and-commit@v9
-        with:
-          author_name: github-actions[bot]
-          author_email: github-actions[bot]@users.noreply.github.com
-          message: "📦 Deploy production build"
-          push: true
+#       - name: Commit and push to new-dev
+#         uses: EndBug/add-and-commit@v9
+#         with:
+#           author_name: github-actions[bot]
+#           author_email: github-actions[bot]@users.noreply.github.com
+#           message: "📦 Deploy production build"
+#           push: true
