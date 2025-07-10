@@ -262,7 +262,7 @@ html {
 }
 
 .home-header {
-  padding-top: 80px !important;
+  padding-top: 12px !important;
 }
 
 .home-section {
@@ -1223,6 +1223,9 @@ html {
 }
 
 @media (max-width: 768px) {
+  .profile-social-links {
+    padding: 0;
+  }
   .profile-social-links .home-social-icons {
     font-size: 1.5em;
     width: 50px;
