@@ -3,9 +3,9 @@ import {
   FaLinkedinIn,
   FaGoogle,
   FaResearchgate,
-  FaTwitter,
-  FaCloud,
 } from "react-icons/fa";
+import { FaBluesky } from "react-icons/fa6";
+import { BsTwitterX } from "react-icons/bs";
 
 function SocialMedia() {
   return (
@@ -40,7 +40,7 @@ function SocialMedia() {
           className="icon-colour home-social-icons"
           title="Bluesky"
         >
-          <FaCloud className="social-icon" />
+          <FaBluesky className="social-icon" />
         </a>
       </li>
       <li className="social-icons">
@@ -51,7 +51,7 @@ function SocialMedia() {
           className="icon-colour home-social-icons"
           title="Twitter/X"
         >
-          <FaTwitter className="social-icon" />
+          <BsTwitterX className="social-icon" />
         </a>
       </li>
       <li className="social-icons">

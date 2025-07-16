@@ -60,26 +60,6 @@ html {
 /*Scrollbar   */
 /* --------- */
 
-::-webkit-scrollbar {
-  width: 7px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #2d1950;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgba(178, 121, 216, 0.959);
-  border-radius: 12px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(222, 130, 235, 0.911);
-  border-radius: 12px;
-}
 
 /* --------- */
 /* Navbar Section  */
@@ -108,7 +88,7 @@ html {
 
 .navbar-toggler span {
   display: block !important;
-  background-color: #ffffff !important;
+  background-color: #000000 !important;
   height: 4px !important;
   width: 27px !important;
   margin-top: 5px !important;
@@ -177,7 +157,7 @@ html {
 }
 
 .nav-link {
-  padding: 0.8rem 1rem !important;
+  padding: 0.3rem 1rem !important;
 }
 
 @media (max-width: 767px) {
@@ -329,8 +309,8 @@ body {
 .home-methods,
 .home-publications,
 .home-personal {
-  margin: 1.25rem 0; /* ↘ reduce top/bottom margins */
-  line-height: 1.8; /* ↘ consistent line spacing */
+  margin: 1rem 0; /* ↘ reduce top/bottom margins */
+  line-height: 1.5; /* ↘ consistent line spacing */
 }
 
 /* If you want them even denser on mobile: */
@@ -350,16 +330,15 @@ body {
   }
 
   .heading-type {
+    height: 50px;
     padding-left: 0;
     text-align: left;
-    padding-bottom: 1rem;
   }
 }
 
 .heading-type {
   padding-left: 0;
   text-align: left;
-  margin-bottom: 30px;
 }
 
 .heading-name {
@@ -408,7 +387,7 @@ body {
 .home-about-section {
   position: relative;
   padding-bottom: 70px !important;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  /* background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); */
 }
 
 .home-about-description {
@@ -465,7 +444,7 @@ body {
 }
 
 .icon-colour {
-  color: #ffffff !important;
+  color: #000000 !important; /* changed from white to black for visibility on light background */
 }
 
 /* --------- */
@@ -1016,7 +995,7 @@ body {
 /* News Section Styling */
 .news-section {
   padding: 4rem 0;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  /* background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); */
 }
 
 .news-timeline {
@@ -1410,5 +1389,126 @@ body {
 
   .loading-container p {
     font-size: 0.9rem;
+  }
+}
+
+/* --- Light Theme Overrides (2025-05) --- */
+body {
+  background-color: #f8f9fa !important;
+  color: #000000 !important;
+}
+
+/* Narrower, light navigation bar */
+.navbar,
+.sticky {
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+}
+
+.navbar {
+  background-color: #ffffff !important;
+}
+
+.navbar {
+  padding: 0.3rem 1rem !important; /* narrower menu bar */
+  font-size: 1rem !important;      /* slightly smaller text */
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: #000000 !important;
+}
+
+.navbar-nav .nav-link:hover::after {
+  background: #000000 !important;
+}
+
+/* Footer – lighter background & smaller padding */
+.footer {
+  background-color: white !important;
+  color: #000000 !important;
+  padding: 20px 0 10px 0 !important; /* narrower footer */
+}
+
+.footer h3,
+.footer a {
+  color: #000000 !important;
+}
+
+/* Home section switches to light background */
+.home-section {
+  background: #f8f9fa !important;
+}
+
+.heading,
+.Typewriter__wrapper {
+  color: #000000 !important;
+}
+
+/* Smaller heading & paragraph text for easier reading */
+.heading {
+  font-size: 2.5em !important;
+}
+
+.heading-description {
+  color: #333333 !important;
+  font-size: 1rem !important;
+}
+
+@media (max-width: 767px) {
+  .heading {
+    font-size: 1.8em !important;
+  }
+  .heading-description {
+    font-size: 0.95rem !important;
+  }
+}
+
+/* Footer new flex layout */
+.footer-inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 10px 15px;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+}
+
+.footer-mail {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-mail:hover {
+  text-decoration: underline;
+}
+
+/* --------- */
+/* Footer Tweaks */
+/* --------- */
+.footer-inner {
+  justify-content: center !important; /* center content instead of spacing to edges */
+  gap: 5rem !important; /* tighter gap between text and icons */
+}
+
+.footer .home-about-social-links {
+  gap: 0.5rem !important; /* smaller gap between individual icons */
+  margin: 0 !important; /* remove default margin */
+}
+
+.footer .home-social-icons {
+  font-size: 1.5em !important; /* reduce icon size */
+}
+
+@media (max-width: 767px) {
+  .footer .home-social-icons {
+    font-size: 1.3em !important; /* even smaller icons on small screens */
+  }
+  .footer-inner {
+    gap: 0.5rem !important; /* tighter gap between text and icons */
   }
 }

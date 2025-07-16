@@ -16,7 +16,7 @@ export const PUBLICATIONS = [
     venue: "Journal of Quantitative Description: Digital Media 5, 2025",
     citations: 1,
     links: {
-      doi: "https://doi.org/10.51565/jqd.v5i1.82",
+      doi: "http://dx.doi.org/10.51685/jqd.2025.007",
       scholar:
         "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:bEWYMUwI8FkC",
     },
@@ -24,7 +24,6 @@ export const PUBLICATIONS = [
       "Social Media",
       "Network science",
       "Political Communication",
-      "System bias",
     ],
     type: "Dataset",
   },
@@ -55,7 +54,7 @@ export const PUBLICATIONS = [
     venue: "Journal of Information Technology and Politics, 2025",
     citations: 0,
     links: {
-      doi: "https://doi.org/10.1080/19331681.2024.2405889",
+      doi: "http://dx.doi.org/10.1080/19331681.2025.2508750",
       scholar:
         "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:TFP_iSt0sucC",
     },
@@ -70,7 +69,7 @@ export const PUBLICATIONS = [
     venue: "Social Science Computer Review 42 (2), 394-415, 2024",
     citations: 6,
     links: {
-      doi: "https://doi.org/10.1177/08944393231174381",
+      doi: "http://dx.doi.org/10.1177/08944393231188472",
       pdf: "https://journals.sagepub.com/doi/pdf/10.1177/08944393231174381",
       scholar:
         "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:IWHjjKOFINEC",
@@ -146,7 +145,7 @@ export const PUBLICATIONS = [
       scholar:
         "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:4JMBOYKVnBMC",
     },
-    tags: ["Generative AI", "System bias", "Journalism"],
+    tags: ["Journalism"],
     type: "Method",
   },
   {
@@ -163,7 +162,7 @@ export const PUBLICATIONS = [
     venue: "Palgrave Handbook of Science and Health Journalism, 2024",
     citations: 2,
     links: {
-      doi: "https://doi.org/10.1007/978-3-031-48355-6_34-1",
+      doi: "http://dx.doi.org/10.1007/978-3-031-49084-2_19",
       scholar:
         "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:TQgYirikUcIC",
     },
@@ -185,11 +184,11 @@ export const PUBLICATIONS = [
     venue: "Information, Communication & Society 26 (11), 2186-2211, 2023",
     citations: 35,
     links: {
-      doi: "https://doi.org/10.1080/1369118X.2022.2068437",
+      doi: "https://doi.org/10.1080/1369118X.2022.2077654",
       scholar:
         "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:M3ejUd6NZC8C",
     },
-    tags: ["Misinformation", "Opioid crisis", "Political Communication"],
+    tags: ["Misinformation", "Political Communication"],
     type: "Dataset",
   },
   {
@@ -212,7 +211,7 @@ export const PUBLICATIONS = [
       scholar:
         "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:Wp0gIr-vW9MC",
     },
-    tags: ["Social bot", "Network science", "Social Media"],
+    tags: ["Network science", "Social Media"],
     type: "Method",
   },
   {
@@ -223,11 +222,11 @@ export const PUBLICATIONS = [
     venue: "International Journal of Human–Computer Interaction, 2023",
     citations: 17,
     links: {
-      doi: "https://doi.org/10.1080/10447318.2023.2217578",
+      doi: "https://doi.org/10.1080/10447318.2023.2217014",
       scholar:
         "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:mVmsd5A6BfQC",
     },
-    tags: ["Generative AI", "System bias", "AI"],
+    tags: ["AI"],
     type: "Dataset",
   },
   {
@@ -237,11 +236,11 @@ export const PUBLICATIONS = [
     venue: "Mobile Media and Communication 11 (3), 2023",
     citations: 0,
     links: {
-      doi: "https://doi.org/10.1177/20501579231189441",
+      doi: "https://doi.org/10.1177/20501579231179547",
       scholar:
         "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:hC7cP41nSMkC",
     },
-    tags: ["System bias", "Social Media"],
+    tags: ["Social Media"],
     type: "Book Review",
   },
   {
@@ -254,7 +253,7 @@ export const PUBLICATIONS = [
       scholar:
         "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:_Qo2XoVZTnwC",
     },
-    tags: ["Journalism", "Digital Media"],
+    tags: ["Journalism"],
     type: "Article",
   },
 ];

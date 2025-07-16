@@ -3,6 +3,15 @@ import { Row, Col, Badge } from "react-bootstrap";
 import { FaUser, FaLink, FaFilePdf, FaGithub, FaGraduationCap } from "react-icons/fa";
 import "./PublicationCard.css";
 
+// Hide specific tags that the user no longer wants to display
+const HIDDEN_TAGS = [
+  "System bias",
+  "Generative AI",
+  "Opioid crisis",
+  "Digital Media",
+  "Social bot",
+];
+
 const CitationBadge = ({ count }) => {
   const getColor = (c) => {
     if (c >= 50) return `conic-gradient(#d9534f ${c * 3.6}deg, #f0f0f0 0deg)`;
@@ -27,7 +36,15 @@ const PublicationCard = ({ pub }) => {
         <div className="pub-date">{pub.year}</div>
       </Col>
       <Col md={8} className="pub-details-col">
-        <h5 className="pub-title" style={{ textAlign: 'left' }}>{pub.title}</h5>
+        <h5 className="pub-title" style={{ textAlign: 'left' }}>
+          {pub.links?.doi ? (
+            <a href={pub.links.doi} target="_blank" rel="noopener noreferrer">
+              {pub.title}
+            </a>
+          ) : (
+            pub.title
+          )}
+        </h5>
         <div className="pub-authors">
           {pub.authors.map((author, index) => (
             <span
@@ -69,12 +86,13 @@ const PublicationCard = ({ pub }) => {
           )}
         </div>
         <div className="pub-tags">
-          {pub.tags.map((tag) => (
-            <Badge bg="secondary" key={tag}>
-              {tag}
-            </Badge>
-          ))}
-          <Badge bg="info">{pub.type}</Badge>
+          {pub.tags
+            .filter((tag) => !HIDDEN_TAGS.includes(tag))
+            .map((tag) => (
+              <Badge bg="secondary" key={tag}>
+                {tag}
+              </Badge>
+            ))}
         </div>
       </Col>
       <Col md={2} className="pub-citation-col">

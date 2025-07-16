@@ -67,12 +67,21 @@ function Home() {
     },
   ];
 
+  // Sort news chronologically: latest first (descending)
+  const sortedNews = [...newsData].sort((a, b) => {
+    const [ma, ya] = a.date.split("/").map(Number);
+    const [mb, yb] = b.date.split("/").map(Number);
+    const da = new Date(ya, ma - 1);
+    const db = new Date(yb, mb - 1);
+    return db - da; // descending order
+  }).slice(0, 5);
+
   return (
     <section>
       <Container fluid className="home-section" id="home">
         <Container className="home-content">
           <Row className="align-items-center">
-            <Col md={4} className="text-center mb-4 mb-md-0">
+            <Col md={4} className="text-center mb-2 mb-md-0">
               <img src={myImg} className="profile-pic" alt="Rui Wang" />
               <div className="profile-social-links mt-3">
                 <SocialMedia />
@@ -82,7 +91,7 @@ function Home() {
               <div className="heading-type">
                 <TypeWriter />
               </div>
-              <h1 style={{ paddingBottom: 15 }} className="heading">
+              <h1 style={{ paddingTop: 15, textAlign: "left" }} className="heading">
                 Hi, I am <strong>Rui Wang</strong>!
               </h1>
 
@@ -244,7 +253,7 @@ function Home() {
               </h2>
 
               <div className="news-timeline">
-                {newsData.map((news, index) => (
+                {sortedNews.map((news, index) => (
                   <div key={index} className="news-item">
                     <Row className="align-items-center">
                       <Col md={3} className="text-center mb-3 mb-md-0">
@@ -268,7 +277,7 @@ function Home() {
                         <p className="news-content">{news.content}</p>
                       </Col>
                     </Row>
-                    {index < newsData.length - 1 && (
+                    {index < sortedNews.length - 1 && (
                       <hr className="news-divider" />
                     )}
                   </div>

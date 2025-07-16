@@ -52,7 +52,7 @@ function Publications() {
               </Button>
             )}
           </div>
-          <div className="filter-group">
+          {/* <div className="filter-group">
             <span className="filter-label">Type:</span>
             {allTypes.map(type => 
               <Button 
@@ -64,7 +64,7 @@ function Publications() {
                 {type}
               </Button>
             )}
-          </div>
+          </div> */}
         </div>
 
         <div>
