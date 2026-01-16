@@ -1,9 +1,9 @@
 {
   "metrics": {
-    "publications": 15,
-    "citations": 102,
-    "hIndex": 5,
-    "i10Index": 3,
+    "publications": 17,
+    "citations": 166,
+    "hIndex": 7,
+    "i10Index": 7,
     "articles": [
       {
         "title": "Weaponizing reproductive rights: A mixed-method analysis of White nationalists’ discussion of abortions online",
@@ -12,7 +12,7 @@
         "authors": "Y Ophir, ML Pruden, D Walter, AD Lokmanoglu, C Tebaldi, R Wang",
         "publication": "Information, Communication & Society 26 (11), 2186-2211, 2023",
         "cited_by": {
-          "value": 36,
+          "value": 44,
           "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=744419282927288659",
           "serpapi_link": "https://serpapi.com/search.json?cites=744419282927288659&engine=google_scholar&hl=en",
           "cites_id": "744419282927288659"
@@ -26,7 +26,7 @@
         "authors": "J Suk, Y Zhang, Z Yue, R Wang, X Dong, D Yang, R Lian",
         "publication": "Communication Research, 00936502231154146, 2023",
         "cited_by": {
-          "value": 20,
+          "value": 30,
           "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9788897378641231943",
           "serpapi_link": "https://serpapi.com/search.json?cites=9788897378641231943&engine=google_scholar&hl=en",
           "cites_id": "9788897378641231943"
@@ -40,7 +40,7 @@
         "authors": "J Hu, R Wang",
         "publication": "International Journal of Human–Computer Interaction, 2023",
         "cited_by": {
-          "value": 17,
+          "value": 26,
           "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11356923023236857871",
           "serpapi_link": "https://serpapi.com/search.json?cites=11356923023236857871&engine=google_scholar&hl=en",
           "cites_id": "11356923023236857871"
@@ -48,30 +48,16 @@
         "year": "2023"
       },
       {
-        "title": "The growing partisan politicization of non-political online spaces: A mixed-method analysis of news app reviews on Google Play between 2009 and 2022",
-        "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:HDshCWvjkbEC",
-        "citation_id": "ZysUK0kAAAAJ:HDshCWvjkbEC",
-        "authors": "R Wang, SS Thimmanayakanapalya, Y Ophir",
-        "publication": "New Media & Society, 2024",
+        "title": "Empowered or Constrained in Platform Governance? An Analysis of Twitter Users’ Responses to Elon Musk’s Takeover",
+        "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:RHpTSmoSYBkC",
+        "citation_id": "ZysUK0kAAAAJ:RHpTSmoSYBkC",
+        "authors": "R Wang, Z Yini, J Suk, S Holland Levin",
+        "publication": "Social Media + Society, 2024",
         "cited_by": {
-          "value": 7,
-          "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2167164454888241616",
-          "serpapi_link": "https://serpapi.com/search.json?cites=2167164454888241616&engine=google_scholar&hl=en",
-          "cites_id": "2167164454888241616"
-        },
-        "year": "2024"
-      },
-      {
-        "title": "Not all bots are created equal: The impact of bots classification techniques on identification of discursive behaviors around the COVID-19 vaccine and climate change",
-        "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:IWHjjKOFINEC",
-        "citation_id": "ZysUK0kAAAAJ:IWHjjKOFINEC",
-        "authors": "R Wang, D Walter, Y Ophir",
-        "publication": "Social Science Computer Review 42 (2), 394-415, 2024",
-        "cited_by": {
-          "value": 6,
-          "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=14166888667905380117",
-          "serpapi_link": "https://serpapi.com/search.json?cites=14166888667905380117&engine=google_scholar&hl=en",
-          "cites_id": "14166888667905380117"
+          "value": 14,
+          "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=16457968697350228689",
+          "serpapi_link": "https://serpapi.com/search.json?cites=16457968697350228689&engine=google_scholar&hl=en",
+          "cites_id": "16457968697350228689"
         },
         "year": "2024"
       },
@@ -82,10 +68,24 @@
         "authors": "M Li, J Suk, Y Zhang, JC Pevehouse, Y Sun, H Kwon, R Lian, R Wang, ...",
         "publication": "new media & society, 14614448241285562, 2024",
         "cited_by": {
-          "value": 5,
+          "value": 12,
           "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2302533292361361437",
           "serpapi_link": "https://serpapi.com/search.json?cites=2302533292361361437&engine=google_scholar&hl=en",
           "cites_id": "2302533292361361437"
+        },
+        "year": "2024"
+      },
+      {
+        "title": "The growing partisan politicization of non-political online spaces: A mixed-method analysis of news app reviews on Google Play between 2009 and 2022",
+        "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:HDshCWvjkbEC",
+        "citation_id": "ZysUK0kAAAAJ:HDshCWvjkbEC",
+        "authors": "R Wang, SS Thimmanayakanapalya, Y Ophir",
+        "publication": "New Media & Society, 2024",
+        "cited_by": {
+          "value": 12,
+          "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2167164454888241616",
+          "serpapi_link": "https://serpapi.com/search.json?cites=2167164454888241616&engine=google_scholar&hl=en",
+          "cites_id": "2167164454888241616"
         },
         "year": "2024"
       },
@@ -96,7 +96,7 @@
         "authors": "R Wang, Y Ophir",
         "publication": "Journalism, 2024",
         "cited_by": {
-          "value": 4,
+          "value": 10,
           "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=12532118791450008805",
           "serpapi_link": "https://serpapi.com/search.json?cites=12532118791450008805&engine=google_scholar&hl=en",
           "cites_id": "12532118791450008805"
@@ -104,30 +104,16 @@
         "year": "2024"
       },
       {
-        "title": "Empowered or Constrained in Platform Governance? An Analysis of Twitter Users’ Responses to Elon Musk’s Takeover",
-        "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:RHpTSmoSYBkC",
-        "citation_id": "ZysUK0kAAAAJ:RHpTSmoSYBkC",
-        "authors": "R Wang, Z Yini, J Suk, S Holland Levin",
-        "publication": "Social Media + Society, 2024",
+        "title": "Not all bots are created equal: The impact of bots classification techniques on identification of discursive behaviors around the COVID-19 vaccine and climate change",
+        "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:IWHjjKOFINEC",
+        "citation_id": "ZysUK0kAAAAJ:IWHjjKOFINEC",
+        "authors": "R Wang, D Walter, Y Ophir",
+        "publication": "Social Science Computer Review 42 (2), 394-415, 2024",
         "cited_by": {
-          "value": 4,
-          "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=16457968697350228689",
-          "serpapi_link": "https://serpapi.com/search.json?cites=16457968697350228689&engine=google_scholar&hl=en",
-          "cites_id": "16457968697350228689"
-        },
-        "year": "2024"
-      },
-      {
-        "title": "Science and Health Journalism and Its Effects on Audiences",
-        "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:TQgYirikUcIC",
-        "citation_id": "ZysUK0kAAAAJ:TQgYirikUcIC",
-        "authors": "Y Ophir, A Liu, P Shah, R Wang, N Acosta, S Gillis",
-        "publication": "Palgrave Handbook of Science and Health Journalism, 2024",
-        "cited_by": {
-          "value": 2,
-          "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10771690549168424583",
-          "serpapi_link": "https://serpapi.com/search.json?cites=10771690549168424583&engine=google_scholar&hl=en",
-          "cites_id": "10771690549168424583"
+          "value": 7,
+          "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=14166888667905380117",
+          "serpapi_link": "https://serpapi.com/search.json?cites=14166888667905380117&engine=google_scholar&hl=en",
+          "cites_id": "14166888667905380117"
         },
         "year": "2024"
       },
@@ -138,10 +124,38 @@
         "authors": "Y Zhang, J Suk, D Yang, Z Yue, R Wang, X Dong, Z An, K Joseph",
         "publication": "Journal of Quantitative Description: Digital Media 5, 2025",
         "cited_by": {
-          "value": 1,
+          "value": 5,
           "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8374538340705351760",
           "serpapi_link": "https://serpapi.com/search.json?cites=8374538340705351760&engine=google_scholar&hl=en",
           "cites_id": "8374538340705351760"
+        },
+        "year": "2025"
+      },
+      {
+        "title": "Science and Health Journalism and Its Effects on Audiences",
+        "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:TQgYirikUcIC",
+        "citation_id": "ZysUK0kAAAAJ:TQgYirikUcIC",
+        "authors": "Y Ophir, A Liu, P Shah, R Wang, N Acosta, S Gillis",
+        "publication": "Palgrave Handbook of Science and Health Journalism, 2024",
+        "cited_by": {
+          "value": 3,
+          "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10771690549168424583",
+          "serpapi_link": "https://serpapi.com/search.json?cites=10771690549168424583&engine=google_scholar&hl=en",
+          "cites_id": "10771690549168424583"
+        },
+        "year": "2024"
+      },
+      {
+        "title": "From activism to polarization: temporal dynamics of# MeToo politicization on Twitter/X",
+        "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:maZDTaKrznsC",
+        "citation_id": "ZysUK0kAAAAJ:maZDTaKrznsC",
+        "authors": "J Suk, Y Zhang, R Wang, D Yang, SH Levin, J Seo, X Dong",
+        "publication": "Information, Communication & Society, 1-21, 2025",
+        "cited_by": {
+          "value": 1,
+          "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3869466800034243594",
+          "serpapi_link": "https://serpapi.com/search.json?cites=3869466800034243594&engine=google_scholar&hl=en",
+          "cites_id": "3869466800034243594"
         },
         "year": "2025"
       },
@@ -152,7 +166,10 @@
         "authors": "R Wang, Y Zhang",
         "publication": "Journal of Information Technology and Politics, 2025",
         "cited_by": {
-          "value": null
+          "value": 1,
+          "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11386795611548664855",
+          "serpapi_link": "https://serpapi.com/search.json?cites=11386795611548664855&engine=google_scholar&hl=en",
+          "cites_id": "11386795611548664855"
         },
         "year": "2025"
       },
@@ -162,6 +179,20 @@
         "citation_id": "ZysUK0kAAAAJ:r0BpntZqJG4C",
         "authors": "R Wang, Y Ophir, A Semenov, A Nikolaev",
         "publication": "Information, Communication & Society, 1-20, 2025",
+        "cited_by": {
+          "value": 1,
+          "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=17055554070582202553",
+          "serpapi_link": "https://serpapi.com/search.json?cites=17055554070582202553&engine=google_scholar&hl=en",
+          "cites_id": "17055554070582202553"
+        },
+        "year": "2025"
+      },
+      {
+        "title": "Can Professional or AI Fact-Checking Protect Trust in Journalism from Political Attacks? The Complex Roles of Source, Transparency, Ideology, and the Machine Heuristic",
+        "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:JV2RwH3_ST0C",
+        "citation_id": "ZysUK0kAAAAJ:JV2RwH3_ST0C",
+        "authors": "R Wang, Y Ophir",
+        "publication": "Computers in Human Behavior, 108872, 2025",
         "cited_by": {
           "value": null
         },
@@ -190,15 +221,15 @@
         "year": "2023"
       },
       {
-        "title": "美国数字媒体专业教育前沿与启示",
-        "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:_Qo2XoVZTnwC",
-        "citation_id": "ZysUK0kAAAAJ:_Qo2XoVZTnwC",
-        "authors": "王睿， 李天真",
-        "publication": "新闻知识, 2019",
+        "title": "Negotiating extremism: Thematic engagement capacity for red pill conversations on Reddit",
+        "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:hMod-77fHWUC",
+        "citation_id": "ZysUK0kAAAAJ:hMod-77fHWUC",
+        "authors": "E Lapan, Y Ophir, R Wang, A Semenov, K Kountz, D Walter",
+        "publication": "New Media & Society, 14614448251400345, 2014",
         "cited_by": {
           "value": null
         },
-        "year": "2019"
+        "year": "2014"
       }
     ]
   },
@@ -210,7 +241,7 @@
       "authors": "Y Ophir, ML Pruden, D Walter, AD Lokmanoglu, C Tebaldi, R Wang",
       "publication": "Information, Communication & Society 26 (11), 2186-2211, 2023",
       "cited_by": {
-        "value": 36,
+        "value": 44,
         "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=744419282927288659",
         "serpapi_link": "https://serpapi.com/search.json?cites=744419282927288659&engine=google_scholar&hl=en",
         "cites_id": "744419282927288659"
@@ -224,7 +255,7 @@
       "authors": "J Suk, Y Zhang, Z Yue, R Wang, X Dong, D Yang, R Lian",
       "publication": "Communication Research, 00936502231154146, 2023",
       "cited_by": {
-        "value": 20,
+        "value": 30,
         "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9788897378641231943",
         "serpapi_link": "https://serpapi.com/search.json?cites=9788897378641231943&engine=google_scholar&hl=en",
         "cites_id": "9788897378641231943"
@@ -238,7 +269,7 @@
       "authors": "J Hu, R Wang",
       "publication": "International Journal of Human–Computer Interaction, 2023",
       "cited_by": {
-        "value": 17,
+        "value": 26,
         "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11356923023236857871",
         "serpapi_link": "https://serpapi.com/search.json?cites=11356923023236857871&engine=google_scholar&hl=en",
         "cites_id": "11356923023236857871"
@@ -246,30 +277,16 @@
       "year": "2023"
     },
     {
-      "title": "The growing partisan politicization of non-political online spaces: A mixed-method analysis of news app reviews on Google Play between 2009 and 2022",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:HDshCWvjkbEC",
-      "citation_id": "ZysUK0kAAAAJ:HDshCWvjkbEC",
-      "authors": "R Wang, SS Thimmanayakanapalya, Y Ophir",
-      "publication": "New Media & Society, 2024",
+      "title": "Empowered or Constrained in Platform Governance? An Analysis of Twitter Users’ Responses to Elon Musk’s Takeover",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:RHpTSmoSYBkC",
+      "citation_id": "ZysUK0kAAAAJ:RHpTSmoSYBkC",
+      "authors": "R Wang, Z Yini, J Suk, S Holland Levin",
+      "publication": "Social Media + Society, 2024",
       "cited_by": {
-        "value": 7,
-        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2167164454888241616",
-        "serpapi_link": "https://serpapi.com/search.json?cites=2167164454888241616&engine=google_scholar&hl=en",
-        "cites_id": "2167164454888241616"
-      },
-      "year": "2024"
-    },
-    {
-      "title": "Not all bots are created equal: The impact of bots classification techniques on identification of discursive behaviors around the COVID-19 vaccine and climate change",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:IWHjjKOFINEC",
-      "citation_id": "ZysUK0kAAAAJ:IWHjjKOFINEC",
-      "authors": "R Wang, D Walter, Y Ophir",
-      "publication": "Social Science Computer Review 42 (2), 394-415, 2024",
-      "cited_by": {
-        "value": 6,
-        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=14166888667905380117",
-        "serpapi_link": "https://serpapi.com/search.json?cites=14166888667905380117&engine=google_scholar&hl=en",
-        "cites_id": "14166888667905380117"
+        "value": 14,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=16457968697350228689",
+        "serpapi_link": "https://serpapi.com/search.json?cites=16457968697350228689&engine=google_scholar&hl=en",
+        "cites_id": "16457968697350228689"
       },
       "year": "2024"
     },
@@ -280,10 +297,24 @@
       "authors": "M Li, J Suk, Y Zhang, JC Pevehouse, Y Sun, H Kwon, R Lian, R Wang, ...",
       "publication": "new media & society, 14614448241285562, 2024",
       "cited_by": {
-        "value": 5,
+        "value": 12,
         "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2302533292361361437",
         "serpapi_link": "https://serpapi.com/search.json?cites=2302533292361361437&engine=google_scholar&hl=en",
         "cites_id": "2302533292361361437"
+      },
+      "year": "2024"
+    },
+    {
+      "title": "The growing partisan politicization of non-political online spaces: A mixed-method analysis of news app reviews on Google Play between 2009 and 2022",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:HDshCWvjkbEC",
+      "citation_id": "ZysUK0kAAAAJ:HDshCWvjkbEC",
+      "authors": "R Wang, SS Thimmanayakanapalya, Y Ophir",
+      "publication": "New Media & Society, 2024",
+      "cited_by": {
+        "value": 12,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2167164454888241616",
+        "serpapi_link": "https://serpapi.com/search.json?cites=2167164454888241616&engine=google_scholar&hl=en",
+        "cites_id": "2167164454888241616"
       },
       "year": "2024"
     },
@@ -294,7 +325,7 @@
       "authors": "R Wang, Y Ophir",
       "publication": "Journalism, 2024",
       "cited_by": {
-        "value": 4,
+        "value": 10,
         "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=12532118791450008805",
         "serpapi_link": "https://serpapi.com/search.json?cites=12532118791450008805&engine=google_scholar&hl=en",
         "cites_id": "12532118791450008805"
@@ -302,30 +333,16 @@
       "year": "2024"
     },
     {
-      "title": "Empowered or Constrained in Platform Governance? An Analysis of Twitter Users’ Responses to Elon Musk’s Takeover",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:RHpTSmoSYBkC",
-      "citation_id": "ZysUK0kAAAAJ:RHpTSmoSYBkC",
-      "authors": "R Wang, Z Yini, J Suk, S Holland Levin",
-      "publication": "Social Media + Society, 2024",
+      "title": "Not all bots are created equal: The impact of bots classification techniques on identification of discursive behaviors around the COVID-19 vaccine and climate change",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:IWHjjKOFINEC",
+      "citation_id": "ZysUK0kAAAAJ:IWHjjKOFINEC",
+      "authors": "R Wang, D Walter, Y Ophir",
+      "publication": "Social Science Computer Review 42 (2), 394-415, 2024",
       "cited_by": {
-        "value": 4,
-        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=16457968697350228689",
-        "serpapi_link": "https://serpapi.com/search.json?cites=16457968697350228689&engine=google_scholar&hl=en",
-        "cites_id": "16457968697350228689"
-      },
-      "year": "2024"
-    },
-    {
-      "title": "Science and Health Journalism and Its Effects on Audiences",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:TQgYirikUcIC",
-      "citation_id": "ZysUK0kAAAAJ:TQgYirikUcIC",
-      "authors": "Y Ophir, A Liu, P Shah, R Wang, N Acosta, S Gillis",
-      "publication": "Palgrave Handbook of Science and Health Journalism, 2024",
-      "cited_by": {
-        "value": 2,
-        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10771690549168424583",
-        "serpapi_link": "https://serpapi.com/search.json?cites=10771690549168424583&engine=google_scholar&hl=en",
-        "cites_id": "10771690549168424583"
+        "value": 7,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=14166888667905380117",
+        "serpapi_link": "https://serpapi.com/search.json?cites=14166888667905380117&engine=google_scholar&hl=en",
+        "cites_id": "14166888667905380117"
       },
       "year": "2024"
     },
@@ -336,10 +353,38 @@
       "authors": "Y Zhang, J Suk, D Yang, Z Yue, R Wang, X Dong, Z An, K Joseph",
       "publication": "Journal of Quantitative Description: Digital Media 5, 2025",
       "cited_by": {
-        "value": 1,
+        "value": 5,
         "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8374538340705351760",
         "serpapi_link": "https://serpapi.com/search.json?cites=8374538340705351760&engine=google_scholar&hl=en",
         "cites_id": "8374538340705351760"
+      },
+      "year": "2025"
+    },
+    {
+      "title": "Science and Health Journalism and Its Effects on Audiences",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:TQgYirikUcIC",
+      "citation_id": "ZysUK0kAAAAJ:TQgYirikUcIC",
+      "authors": "Y Ophir, A Liu, P Shah, R Wang, N Acosta, S Gillis",
+      "publication": "Palgrave Handbook of Science and Health Journalism, 2024",
+      "cited_by": {
+        "value": 3,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10771690549168424583",
+        "serpapi_link": "https://serpapi.com/search.json?cites=10771690549168424583&engine=google_scholar&hl=en",
+        "cites_id": "10771690549168424583"
+      },
+      "year": "2024"
+    },
+    {
+      "title": "From activism to polarization: temporal dynamics of# MeToo politicization on Twitter/X",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:maZDTaKrznsC",
+      "citation_id": "ZysUK0kAAAAJ:maZDTaKrznsC",
+      "authors": "J Suk, Y Zhang, R Wang, D Yang, SH Levin, J Seo, X Dong",
+      "publication": "Information, Communication & Society, 1-21, 2025",
+      "cited_by": {
+        "value": 1,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3869466800034243594",
+        "serpapi_link": "https://serpapi.com/search.json?cites=3869466800034243594&engine=google_scholar&hl=en",
+        "cites_id": "3869466800034243594"
       },
       "year": "2025"
     },
@@ -350,7 +395,10 @@
       "authors": "R Wang, Y Zhang",
       "publication": "Journal of Information Technology and Politics, 2025",
       "cited_by": {
-        "value": null
+        "value": 1,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11386795611548664855",
+        "serpapi_link": "https://serpapi.com/search.json?cites=11386795611548664855&engine=google_scholar&hl=en",
+        "cites_id": "11386795611548664855"
       },
       "year": "2025"
     },
@@ -360,6 +408,20 @@
       "citation_id": "ZysUK0kAAAAJ:r0BpntZqJG4C",
       "authors": "R Wang, Y Ophir, A Semenov, A Nikolaev",
       "publication": "Information, Communication & Society, 1-20, 2025",
+      "cited_by": {
+        "value": 1,
+        "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=17055554070582202553",
+        "serpapi_link": "https://serpapi.com/search.json?cites=17055554070582202553&engine=google_scholar&hl=en",
+        "cites_id": "17055554070582202553"
+      },
+      "year": "2025"
+    },
+    {
+      "title": "Can Professional or AI Fact-Checking Protect Trust in Journalism from Political Attacks? The Complex Roles of Source, Transparency, Ideology, and the Machine Heuristic",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:JV2RwH3_ST0C",
+      "citation_id": "ZysUK0kAAAAJ:JV2RwH3_ST0C",
+      "authors": "R Wang, Y Ophir",
+      "publication": "Computers in Human Behavior, 108872, 2025",
       "cited_by": {
         "value": null
       },
@@ -388,15 +450,15 @@
       "year": "2023"
     },
     {
-      "title": "美国数字媒体专业教育前沿与启示",
-      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:_Qo2XoVZTnwC",
-      "citation_id": "ZysUK0kAAAAJ:_Qo2XoVZTnwC",
-      "authors": "王睿， 李天真",
-      "publication": "新闻知识, 2019",
+      "title": "Negotiating extremism: Thematic engagement capacity for red pill conversations on Reddit",
+      "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ZysUK0kAAAAJ&citation_for_view=ZysUK0kAAAAJ:hMod-77fHWUC",
+      "citation_id": "ZysUK0kAAAAJ:hMod-77fHWUC",
+      "authors": "E Lapan, Y Ophir, R Wang, A Semenov, K Kountz, D Walter",
+      "publication": "New Media & Society, 14614448251400345, 2014",
       "cited_by": {
         "value": null
       },
-      "year": "2019"
+      "year": "2014"
     }
   ]
 }
