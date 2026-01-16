@@ -48,7 +48,25 @@ function normalizeTitle(title) {
 // Helper function to parse authors from the scholar format
 function parseAuthors(authorString) {
   // Split by comma and clean up
-  return authorString.split(',').map(a => a.trim());
+  const authors = authorString.split(',').map(a => a.trim());
+
+  // Normalize author format to "LastName, FirstInitial." for consistency
+  return authors.map(author => {
+    // Check if author is in "FirstInitial LastName" format (e.g., "R Wang")
+    const match = author.match(/^([A-Z])\s+([A-Z][a-z]+)$/);
+    if (match) {
+      // Convert to "LastName, FirstInitial." format
+      return `${match[2]}, ${match[1]}.`;
+    }
+    // Check if author is in "FirstInitial. LastName" format (e.g., "R. Wang")
+    const match2 = author.match(/^([A-Z])\.\s+([A-Z][a-z]+)$/);
+    if (match2) {
+      // Convert to "LastName, FirstInitial." format
+      return `${match2[2]}, ${match2[1]}.`;
+    }
+    // Otherwise return as-is (already in correct format or complex name)
+    return author;
+  });
 }
 
 // Create a map of existing publications by normalized title
