@@ -30,6 +30,7 @@ const CitationBadge = ({ count }) => {
 };
 
 const PublicationCard = ({ pub }) => {
+  const pubLink = pub?.links?.doi || pub?.links?.scholar;
   return (
     <Row className="publication-card">
       <Col md={2} className="pub-date-col">
@@ -37,8 +38,8 @@ const PublicationCard = ({ pub }) => {
       </Col>
       <Col md={8} className="pub-details-col">
         <h5 className="pub-title" style={{ textAlign: 'left' }}>
-          {pub.links?.doi ? (
-            <a href={pub.links.doi} target="_blank" rel="noopener noreferrer">
+          {pubLink ? (
+            <a href={pubLink} target="_blank" rel="noopener noreferrer">
               {pub.title}
             </a>
           ) : (
@@ -46,15 +47,19 @@ const PublicationCard = ({ pub }) => {
           )}
         </h5>
         <div className="pub-authors">
-          {pub.authors.map((author, index) => (
-            <span
-              key={index}
-              className={author.includes("Wang, R.") ? "author-bold" : ""}
-            >
-              <FaUser className="author-icon" /> {author}
-              {index < pub.authors.length - 1 ? ", " : ""}
-            </span>
-          ))}
+          {pub.authors.map((author, index) => {
+            // Check for both "Wang, R." and "R Wang" formats
+            const isRuiWang = author.includes("Wang, R.") || author.includes("R Wang");
+            return (
+              <span
+                key={index}
+                className={isRuiWang ? "author-bold" : ""}
+              >
+                <FaUser className="author-icon" /> {author}
+                {index < pub.authors.length - 1 ? ", " : ""}
+              </span>
+            );
+          })}
         </div>
         <div className="pub-venue">
           <em>{pub.venue}</em>

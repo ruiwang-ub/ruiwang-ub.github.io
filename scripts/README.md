@@ -75,4 +75,69 @@ Please set your API key:
   or create a .env file with: SERPAPI_KEY=your_api_key_here
 ```
 
-This means you need to set your API key as an environment variable before running the script. 
+This means you need to set your API key as an environment variable before running the script.
+
+## convert-scholar-to-constants.js
+
+This script converts data from `scholar-data.json` to `Constants.js` format for the Publications page.
+
+### Usage
+
+```bash
+# Using npm script (recommended)
+npm run update-constants
+
+# Or directly with node
+node scripts/convert-scholar-to-constants.js
+```
+
+### What it does
+
+1. **Reads** the latest data from `src/data/scholar-data.json`
+2. **Merges** with existing `src/Constants.js` to preserve manually added metadata
+3. **Updates** citation counts for existing publications
+4. **Adds** new publications with inferred tags and types
+5. **Creates** a backup at `src/Constants.js.backup`
+
+### Important Notes
+
+- **Preserves metadata**: DOI links, PDF links, GitHub links, tags, and types are preserved for existing publications
+- **Infers metadata**: New publications get automatically inferred tags and types based on keywords
+- **Manual review needed**: You should review new publications and add DOI/PDF/GitHub links manually
+
+### After running the script
+
+1. **Review the changes** in `src/Constants.js`
+2. **Check new publications** and add missing metadata (DOI, PDF, GitHub links)
+3. **Adjust tags and types** if the inferred values are incorrect
+4. **Test locally** with `npm start`
+5. **Commit and push** the changes
+
+## Recommended Workflow
+
+To update all publication data and deploy:
+
+```bash
+# 1. Update scholar data from Google Scholar
+npm run update-scholar-data
+
+# 2. Convert to Constants.js format
+npm run update-constants
+
+# Or run both at once:
+npm run update-all
+
+# 3. Review the changes (especially new publications)
+git diff src/Constants.js
+
+# 4. Manually add DOI/PDF/GitHub links for new publications if needed
+# Edit src/Constants.js
+
+# 5. Commit the changes
+git add src/data/scholar-data.json src/Constants.js
+git commit -m "Update publication data"
+git push
+
+# 6. Deploy to GitHub Pages
+npm run deploy
+```

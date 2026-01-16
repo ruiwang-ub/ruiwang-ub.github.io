@@ -27,6 +27,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "update-scholar-data": "node scripts/update-scholar-data.js",
+    "update-constants": "node scripts/convert-scholar-to-constants.js",
+    "update-all": "npm run update-scholar-data && npm run update-constants",
     "predeploy": "npm run build && cp CNAME build/",
     "deploy": "gh-pages -d build"
   },
