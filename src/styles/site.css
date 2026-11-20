@@ -583,7 +583,7 @@ ol {
 
 @media (min-width: 60rem) {
   .intro {
-    grid-template-columns: minmax(0, 1fr) 19rem;
+    grid-template-columns: minmax(0, 1fr) clamp(19rem, 26vw, 24rem);
     column-gap: clamp(3rem, 6vw, 5.5rem);
     align-items: start;
   }
@@ -591,6 +591,11 @@ ol {
   .intro__photo {
     width: 100%;
     padding-top: 0.75rem;
+  }
+
+  .intro__photo .intro__profiles {
+    justify-content: space-between;
+    margin-top: 1.25rem;
   }
 }
 
@@ -927,6 +932,10 @@ ol {
 .contact__secondary {
   margin: 0;
   font-size: 1.125rem;
+}
+
+.contact__profiles {
+  margin-top: 1.5rem;
 }
 
 .site-footer {

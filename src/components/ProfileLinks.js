@@ -9,15 +9,22 @@ const ICONS = {
   email: FaEnvelope,
 };
 
-function LinkContent({ id, label, showIcon }) {
+function LinkContent({ id, label, showIcon, opensNewTab }) {
   const Icon = ICONS[id];
+  const hint = opensNewTab ? <span className="visually-hidden"> (opens in a new tab)</span> : null;
   if (!showIcon || !Icon) {
-    return label;
+    return (
+      <>
+        {label}
+        {hint}
+      </>
+    );
   }
   return (
     <>
       <Icon aria-hidden="true" focusable="false" />
       <span className="visually-hidden">{label}</span>
+      {hint}
     </>
   );
 }
@@ -30,8 +37,8 @@ export default function ProfileLinks({ className, variant = "text" }) {
     <ul className={classes.filter(Boolean).join(" ")}>
       {profile.links.map((link) => (
         <li key={link.id}>
-          <a href={link.url} title={showIcon ? link.label : undefined}>
-            <LinkContent id={link.id} label={link.label} showIcon={showIcon} />
+          <a href={link.url} title={showIcon ? link.label : undefined} target="_blank" rel="noopener noreferrer">
+            <LinkContent id={link.id} label={link.label} showIcon={showIcon} opensNewTab />
           </a>
         </li>
       ))}

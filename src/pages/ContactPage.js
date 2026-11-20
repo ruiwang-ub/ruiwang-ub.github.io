@@ -1,6 +1,7 @@
 import EmailLink from "../components/EmailLink";
 import Markdown from "../components/Markdown";
 import Page from "../components/Page";
+import ProfileLinks from "../components/ProfileLinks";
 import pages from "../content/pages.generated";
 import profile from "../content/profile";
 
@@ -16,6 +17,7 @@ export default function ContactPage() {
           <a href={profile.facultyProfileUrl}>Faculty profile at {profile.affiliation}</a>
         </p>
       ) : null}
+      <ProfileLinks className="contact__profiles" variant="icons" />
     </Page>
   );
 }

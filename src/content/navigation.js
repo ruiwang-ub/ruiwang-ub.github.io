@@ -39,7 +39,7 @@ export const teachingPages = [
     label: "Student Voices",
     path: "/teaching/student-voices/",
     description:
-      "Excerpts from student course evaluations at Loyola University Maryland.",
+      "Excerpts from student course evaluations.",
   },
 ];
 

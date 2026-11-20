@@ -36,7 +36,7 @@ export default function HomePage() {
           </ul>
         </div>
         <div className="intro__photo">
-          <Headshot sizes="(min-width: 60rem) 19rem, 18rem" />
+          <Headshot sizes="(min-width: 60rem) 24rem, 18rem" />
           <ProfileLinks className="intro__profiles" variant="icons" />
         </div>
       </section>

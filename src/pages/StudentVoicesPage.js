@@ -21,7 +21,7 @@ export default function StudentVoicesPage() {
                 <p>{voice.quote}</p>
               </blockquote>
               <figcaption className="voice__source">
-                {voice.course} · {voice.term}
+                {[voice.course, voice.term, voice.institution].filter(Boolean).join(" · ")}
               </figcaption>
             </figure>
           </li>

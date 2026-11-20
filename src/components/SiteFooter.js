@@ -8,7 +8,7 @@ export default function SiteFooter() {
     <footer className="site-footer">
       <div className="site-footer__inner">
         <p>
-          © {year} {profile.name} · {profile.department}, {profile.affiliation}
+          © {year} {profile.name}
         </p>
         <p>
           <EmailLink />

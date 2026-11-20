@@ -16,8 +16,9 @@ export default function PublicationPage() {
       sectionNav={<SectionNav label="Research" landing="/research/" items={researchPages} />}
     >
       <div className="scholar">
-        <a className="button button--primary" href={profile.scholar.url}>
+        <a className="button button--primary" href={profile.scholar.url} target="_blank" rel="noopener noreferrer">
           View my Google Scholar profile
+          <span className="visually-hidden"> (opens in a new tab)</span>
         </a>
         {summary ? <p className="scholar__count">{summary}</p> : null}
       </div>

@@ -1,6 +1,21 @@
 import { fireEvent, render, screen, within } from "@testing-library/react";
 import App from "./App";
 
+const ICON_NAMES = [
+  "ResearchGate (opens in a new tab)",
+  "Google Scholar (opens in a new tab)",
+  "LinkedIn (opens in a new tab)",
+  "Email",
+];
+
+function expectNewTabsForProfiles(links) {
+  links.slice(0, 3).forEach((link) => {
+    expect(link).toHaveAttribute("target", "_blank");
+    expect(link).toHaveAttribute("rel", "noopener noreferrer");
+  });
+  expect(links[3]).not.toHaveAttribute("target");
+}
+
 afterEach(() => {
   window.history.pushState({}, "", "/");
 });
@@ -67,7 +82,7 @@ test("shows the four profile icons under the headshot, linked to their destinati
 
   const photo = screen.getByRole("img", { name: /Illustrated portrait of Rui Wang/ }).parentElement;
   const links = within(photo).getAllByRole("link");
-  expect(links.map((link) => link.textContent)).toEqual(["ResearchGate", "Google Scholar", "LinkedIn", "Email"]);
+  expect(links.map((link) => link.textContent)).toEqual(ICON_NAMES);
   expect(links.map((link) => link.getAttribute("href"))).toEqual([
     "https://www.researchgate.net/profile/Rui-Wang-23",
     "https://scholar.google.com/citations?user=ZysUK0kAAAAJ&hl=en",
@@ -75,6 +90,29 @@ test("shows the four profile icons under the headshot, linked to their destinati
     "/contact/",
   ]);
   links.forEach((link) => expect(link.querySelector("svg")).not.toBeNull());
+  expectNewTabsForProfiles(links);
+});
+
+test("adds the same icon buttons to Contact and keeps the footer to the name and email", () => {
+  window.history.pushState({}, "", "/contact/");
+  render(<App />);
+
+  const links = within(document.querySelector(".contact__profiles")).getAllByRole("link");
+  expect(links.map((link) => link.textContent)).toEqual(ICON_NAMES);
+  expectNewTabsForProfiles(links);
+
+  const footer = document.querySelector(".site-footer");
+  expect(footer.textContent).toBe(`© ${new Date().getFullYear()} Rui Wangrwang [at] loyola.edu`);
+});
+
+test("credits Loyola on each Student Voices excerpt instead of in the introduction", () => {
+  window.history.pushState({}, "", "/teaching/student-voices/");
+  render(<App />);
+
+  expect(screen.getByText("These excerpts come from student course evaluations.")).toBeInTheDocument();
+  const sources = Array.from(document.querySelectorAll(".voice__source")).map((source) => source.textContent);
+  expect(sources).toHaveLength(8);
+  sources.forEach((source) => expect(source).toMatch(/ · (Spring|Fall) \d{4} · Loyola University Maryland$/));
 });
 
 test("uses the same four icon buttons on About Me", () => {
@@ -83,8 +121,18 @@ test("uses the same four icon buttons on About Me", () => {
 
   const summary = screen.getByText("Rui Wang", { selector: ".profile-summary__name" }).parentElement;
   const links = within(summary).getAllByRole("link");
-  expect(links.map((link) => link.textContent)).toEqual(["ResearchGate", "Google Scholar", "LinkedIn", "Email"]);
+  expect(links.map((link) => link.textContent)).toEqual(ICON_NAMES);
   links.forEach((link) => expect(link.querySelector("svg")).not.toBeNull());
+  expectNewTabsForProfiles(links);
+});
+
+test("opens the Google Scholar button on Publication in a new tab", () => {
+  window.history.pushState({}, "", "/publication/");
+  render(<App />);
+
+  const scholar = screen.getByRole("link", { name: "View my Google Scholar profile (opens in a new tab)" });
+  expect(scholar).toHaveAttribute("target", "_blank");
+  expect(scholar).toHaveAttribute("rel", "noopener noreferrer");
 });
 
 test("shows the CV online with a Download button to the Google Drive link", () => {
