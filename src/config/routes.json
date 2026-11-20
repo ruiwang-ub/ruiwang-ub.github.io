@@ -1,0 +1,68 @@
+[
+  {
+    "key": "home",
+    "path": "/",
+    "title": "Rui Wang | Communication and Media, Loyola University Maryland",
+    "description": "Rui Wang is an Assistant Professor of Communication and Media at Loyola University Maryland who studies political communication, digital journalism, and AI."
+  },
+  {
+    "key": "about",
+    "path": "/about/",
+    "title": "About Me | Rui Wang",
+    "description": "About Rui Wang: degrees from the University at Buffalo and Rutgers, research on how AI and digital platforms shape what people trust, and teaching at Loyola."
+  },
+  {
+    "key": "research",
+    "path": "/research/",
+    "title": "Research | Rui Wang",
+    "description": "Rui Wang’s research on how AI and digital platforms shape what information people encounter and how they assess it, across political communication and journalism."
+  },
+  {
+    "key": "currentProjects",
+    "path": "/research/current-projects/",
+    "title": "Current Projects | Rui Wang",
+    "description": "Current projects: auditing AI search citations, testing how readers judge AI answers, AI disclosure in news, and political identity in Reddit discussions."
+  },
+  {
+    "key": "publication",
+    "path": "/publication/",
+    "title": "Publication | Rui Wang",
+    "description": "Selected publications by Rui Wang, grouped by research area: AI search, AI and trust in journalism, digital platforms and identity, and computational methods."
+  },
+  {
+    "key": "teaching",
+    "path": "/teaching/",
+    "title": "Teaching | Rui Wang",
+    "description": "Rui Wang’s teaching in digital media and emerging communication technologies, with links to the teaching philosophy, courses, and student voices."
+  },
+  {
+    "key": "teachingPhilosophy",
+    "path": "/teaching/philosophy/",
+    "title": "Teaching Philosophy | Rui Wang",
+    "description": "How Rui Wang brings research into the classroom, gives students work they can use, revises courses as technology changes, and makes room for curiosity."
+  },
+  {
+    "key": "courses",
+    "path": "/teaching/courses/",
+    "title": "Courses | Rui Wang",
+    "description": "Courses Rui Wang teaches and is developing at Loyola University Maryland, and earlier teaching at the University at Buffalo, Anhui Normal University, and Rutgers."
+  },
+  {
+    "key": "studentVoices",
+    "path": "/teaching/student-voices/",
+    "title": "Student Voices | Rui Wang",
+    "description": "Excerpts from student course evaluations for Rui Wang’s courses at Loyola University Maryland, including Digital Tools and Mobile Media & UX Design."
+  },
+  {
+    "key": "cv",
+    "path": "/cv/",
+    "title": "CV | Rui Wang",
+    "description": "The curriculum vitae of Rui Wang, Assistant Professor of Communication and Media at Loyola University Maryland, to read online or download."
+  },
+  {
+    "key": "contact",
+    "path": "/contact/",
+    "title": "Contact | Rui Wang",
+    "description": "Contact Rui Wang about research and collaboration, especially work on AI search, trust in news, and how digital platforms shape public discussion."
+  }
+]

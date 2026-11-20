@@ -1,0 +1,1 @@
+I study how AI and digital platforms shape what information people encounter and how they assess it. My work spans political communication and digital journalism, with a focus on political identity, polarization, and trust.

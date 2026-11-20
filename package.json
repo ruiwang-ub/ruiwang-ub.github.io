@@ -21,9 +21,13 @@
     "typewriter-effect": "^2.18.2"
   },
   "scripts": {
-    "start": "NODE_OPTIONS='--openssl-legacy-provider' PORT=3001 react-scripts start",
+    "content": "node scripts/build-content.js",
+    "prestart": "node scripts/build-content.js",
+    "start": "node scripts/build-content.js --watch & NODE_OPTIONS='--openssl-legacy-provider' PORT=3001 react-scripts start",
+    "prebuild": "node scripts/build-content.js",
     "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
-    "postbuild": "node scripts/generate-thumbnail.js",
+    "postbuild": "node scripts/prerender.js",
+    "pretest": "node scripts/build-content.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "update-scholar-data": "node scripts/update-scholar-data.js",

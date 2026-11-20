@@ -1,252 +1,127 @@
 # Rui Wang - Personal Academic Website
 
-This is a personal portfolio website for Rui Wang, Assistant Professor in Communication and Media at Loyola University Maryland. The website showcases academic publications, research metrics from Google Scholar, and professional information.
-
-## 🌐 Live Website
+The personal academic website of Rui Wang, Assistant Professor in the Department of Communication and Media at Loyola University Maryland.
 
 - **Production**: [https://ruiwangcomm.com](https://ruiwangcomm.com)
 - **GitHub Pages**: [https://ruiwang-ub.github.io](https://ruiwang-ub.github.io)
 
-## 🛠️ Technology Stack
+## Technology
 
-- **Frontend**: React 17, React Router, Bootstrap
-- **Deployment**: GitHub Pages
-- **Data Source**: Google Scholar (via SerpAPI)
-- **Build Tool**: Create React App
+- React 17, Create React App 4, and React Router 5
+- Plain CSS in `src/styles/site.css`, with Newsreader and Inter from Google Fonts
+- Markdown for long-form copy, and JavaScript data files for news, courses, publications, student voices, and the profile
+- A Puppeteer step after every build that saves each page as static HTML and writes `404.html`, `sitemap.xml`, and the social-sharing image `thumbnail.png`
 
-## 📋 Prerequisites
-
-Before you begin, make sure you have the following installed:
-
-- **Node.js** (version 14 or higher)
-- **npm** (comes with Node.js)
-- **Git**
-- **SerpAPI Key** (for updating Google Scholar data)
-
-## 🚀 Getting Started
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/ruiwang-ub/ruiwang-ub.github.io.git
-cd ruiwang-ub.github.io
-```
-
-### 2. Install Dependencies
+## Getting started
 
 ```bash
 npm install
-```
-
-### 3. Set Up Environment Variables
-
-Create a `.env` file in the project root:
-
-```bash
-SKIP_PREFLIGHT_CHECK=true
-SERPAPI_KEY=your_serpapi_key_here
-```
-
-**Important**:
-- The `.env` file is already in `.gitignore` and will NOT be committed to the repository
-- Get your SerpAPI key from [https://serpapi.com](https://serpapi.com)
-- You need this key to update Google Scholar data
-
-### 4. Run Locally
-
-```bash
 npm start
 ```
 
-The website will open at [http://localhost:3001](http://localhost:3001)
+The site runs at [http://localhost:3001](http://localhost:3001). `npm start` also watches `src/content/pages/` and reloads the page when you edit a Markdown file.
 
-## 📊 Updating Publication Data
+## Editing content
 
-The website displays publication data from Google Scholar. To update this data:
+| What | File |
+| --- | --- |
+| Recent News (the eight newest show on the home page) | `src/content/news.js` |
+| Courses | `src/content/courses.js` |
+| Google Scholar citation total and date | `src/content/profile.js` (`scholar.citationTotal`, `scholar.citationsAsOf`) |
+| Name, title (`honorific`), role, email, profile links, faculty profile, headshot | `src/content/profile.js` |
+| CV link (Google Drive), shown on the CV page and used by its Download button | `src/content/profile.js` (`cvUrl`) |
+| Publications grouped by research area | `src/content/publications.js` |
+| Student Voices excerpts | `src/content/studentVoices.js` |
+| Home bio, About Me, Research, Current Projects, Teaching, Teaching Philosophy, Student Voices intro, and Contact copy | `src/content/pages/*.md` |
+| Descriptions on the Research and Teaching landing pages | `src/content/navigation.js` |
+| Page titles and search descriptions | `src/config/routes.json` |
+| Production domain for canonical URLs and the sitemap | `src/config/site.json` and `public/robots.txt` |
 
-### Option 1: Update Everything at Once (Recommended)
+### News entries
 
-```bash
-npm run update-all
+Each entry has a `date`, a `category`, a `headline`, one sentence of `text`, and an optional `link` with a `label` and `url`.
+
+- Dates can be a full date (`"2026-11-19"`), a month (`"2026-09"`), or a year (`"2026"`). The site shows the precision you enter.
+- Entries are sorted newest first. Year-only entries appear after dated entries from the same year, and month-only entries after full dates in the same month. Entries with the same date keep the order of the file.
+- Categories: `publication`, `conference`, `grant`, `award`, `teaching`, `appointment`.
+- A link without a `url` is hidden.
+
+### Courses
+
+Each course has a `title`, an optional `code`, a `role`, its `semesters`, and, for Loyola courses, a one-line `summary`. Write semesters compactly: `F` for Fall or `S` for Spring plus the two-digit year, such as `"F25, S26, F26"`. Notes go in parentheses, such as `"S27 (planned)"` or `"F22, S23 (lecturer), S22 (teaching assistant)"`. Set `inDevelopment: true` to list a Loyola course under In development.
+
+### Citation total
+
+Fill in both fields to show "{total} citations · as of {Month YYYY}" on the Publication page:
+
+```js
+scholar: {
+  url: "https://scholar.google.com/citations?user=ZysUK0kAAAAJ&hl=en",
+  citationTotal: 172,
+  citationsAsOf: "2026-11",
+},
 ```
 
-This command will:
-1. Fetch the latest data from Google Scholar
-2. Update both the Home page metrics and Publications page
+Leave `citationTotal: null` or `citationsAsOf: ""` to hide the line. The Google Scholar link always shows.
 
-### Option 2: Update Step by Step
+### Email address
+
+The email is stored in two parts in `src/content/profile.js` (`email: { user: "rwang", domain: "loyola.edu" }`). The site shows it as "rwang [at] loyola.edu" and builds the real `mailto:` link only when someone clicks it, so the full address never appears in the page source. Without JavaScript, the email links open the Contact page.
+
+### Headshot
+
+The home page serves the headshot from `public/images/rui-wang-320.jpg`, `-640.jpg`, and `-1024.jpg`. To replace it, save a square image of at least 1024 × 1024 pixels as `src/Assets/rui.jpg`, regenerate the three sizes, and update `headshot.alt` in `src/content/profile.js`:
 
 ```bash
-# Step 1: Fetch latest Google Scholar data
-npm run update-scholar-data
-
-# Step 2: Convert to Publications page format
-npm run update-constants
+for size in 320 640 1024; do sips -Z $size --setProperty formatOptions 62 src/Assets/rui.jpg --out public/images/rui-wang-$size.jpg; done
 ```
 
-### After Updating Data
+## Build
 
-1. **Review the changes**:
-   ```bash
-   git diff src/data/scholar-data.json
-   git diff src/Constants.js
-   ```
+```bash
+npm run build
+```
 
-2. **Check for new publications**: The script will report any new publications added. You should manually add DOI, PDF, and GitHub links for new publications in `src/Constants.js` if available.
+This builds the app into `build/`, then `scripts/prerender.js` saves each page listed in `src/config/routes.json` as `build/<route>/index.html` and writes `build/404.html`, `build/sitemap.xml`, and `build/thumbnail.png`. Canonical URLs end in a slash (for example `https://ruiwangcomm.com/about/`) because GitHub Pages serves each page from its own folder.
 
-3. **Test locally**:
-   ```bash
-   npm start
-   ```
+## Tests
 
-4. **Commit the changes**:
-   ```bash
-   git add src/data/scholar-data.json src/Constants.js
-   git commit -m "Update publication data"
-   git push
-   ```
+```bash
+npm test
+```
 
-## 🚢 Deployment
-
-The website is deployed to GitHub Pages. To deploy:
-
-### Deploy to Production
+## Deployment
 
 ```bash
 npm run deploy
 ```
 
-This command will:
-1. Build the production version of the website
-2. Copy the CNAME file (for custom domain)
-3. Deploy to the `gh-pages` branch
-4. The website will be live at [https://ruiwangcomm.com](https://ruiwangcomm.com) in a few minutes
+This builds the site, copies `CNAME` into `build/`, and publishes `build/` to the `gh-pages` branch.
 
-### Build Only (Without Deploying)
-
-```bash
-npm run build
-```
-
-The production files will be in the `build/` directory.
-
-## 📁 Project Structure
-
-```
-ruiwang-ub.github.io/
-├── public/              # Static files
-├── src/
-│   ├── components/      # React components
-│   │   ├── Home/       # Home page with Scholar metrics
-│   │   ├── Projects/   # Publications page
-│   │   ├── Resume/     # Resume/CV page
-│   │   └── Navbar.js   # Navigation bar
-│   ├── data/
-│   │   └── scholar-data.json  # Cached Google Scholar data
-│   ├── Constants.js    # Publication data for Publications page
-│   └── App.js          # Main app component
-├── scripts/
-│   ├── update-scholar-data.js      # Fetch Google Scholar data
-│   ├── convert-scholar-to-constants.js  # Convert to Constants.js format
-│   └── README.md       # Detailed script documentation
-├── .env                # Environment variables (DO NOT COMMIT)
-├── package.json        # Dependencies and scripts
-└── README.md          # This file
-```
-
-## 📝 Available Scripts
+## Available scripts
 
 | Command | Description |
-|---------|-------------|
-| `npm start` | Run the website locally at http://localhost:3001 |
-| `npm run build` | Build production version |
-| `npm run deploy` | Deploy to GitHub Pages |
-| `npm run update-scholar-data` | Fetch latest Google Scholar data |
-| `npm run update-constants` | Convert scholar data to Publications format |
-| `npm run update-all` | Update both scholar data and Constants.js |
+| --- | --- |
+| `npm start` | Run the site locally at http://localhost:3001 |
+| `npm run build` | Build and prerender the production site into `build/` |
+| `npm test` | Run the tests |
+| `npm run deploy` | Build and publish to GitHub Pages |
+| `npm run content` | Regenerate `src/content/pages.generated.js` from the Markdown files |
 
-## 🔧 Common Tasks
+## Google Scholar data scripts
 
-### Adding a New Publication Manually
+`npm run update-all` still fetches Google Scholar data through SerpAPI into `src/data/scholar-data.json` and `src/Constants.js`, but the redesigned site no longer reads those files. The scripts need a `SERPAPI_KEY` in `.env`, which must never be committed. See `scripts/README.md`.
 
-1. Open `src/Constants.js`
-2. Add a new publication object following this format:
+## Troubleshooting
 
-```javascript
-{
-  year: "2025",
-  title: "Your Publication Title",
-  authors: ["Wang, R.", "Co-Author, A."],
-  venue: "Journal Name, Volume(Issue), Pages, Year",
-  citations: 0,
-  links: {
-    doi: "https://doi.org/...",
-    pdf: "https://...",
-    scholar: "https://scholar.google.com/..."
-  },
-  tags: ["Tag1", "Tag2"],
-  type: "Article"  // Options: Article, Method, Dataset, Book Chapter, Book Review
-}
-```
+### Build fails with an OpenSSL error
 
-3. Save and test locally
-4. Commit and deploy
+The npm scripts already set `NODE_OPTIONS=--openssl-legacy-provider`. If you run `react-scripts` directly, set it first:
 
-### Updating Personal Information
-
-- **Bio and research interests**: Edit `src/components/Home/Home.js`
-- **Resume/CV**: Replace `src/Assets/Rui_Wang_CV.pdf`
-- **Profile photo**: Replace `src/Assets/rui.jpg`
-- **Social media links**: Edit `src/components/SocialMedia.js`
-
-### Changing Website Styling
-
-- **Global styles**: Edit `src/style.css`
-- **Component-specific styles**: Edit the corresponding `.css` file in the component folder
-
-## 🔐 Security Notes
-
-- **Never commit** the `.env` file
-- **Never hardcode** API keys in the code
-- The SerpAPI key is only used locally to fetch data
-- The deployed website uses cached data (no API keys exposed)
-
-## 🐛 Troubleshooting
-
-### Issue: "SERPAPI_KEY environment variable is required"
-
-**Solution**: Make sure you have created a `.env` file with your SerpAPI key:
-```bash
-echo "SERPAPI_KEY=your_actual_key_here" >> .env
-```
-
-### Issue: "There might be a problem with the project dependency tree"
-
-**Solution**: Add `SKIP_PREFLIGHT_CHECK=true` to your `.env` file
-
-### Issue: Website not updating after deployment
-
-**Solution**:
-1. Clear your browser cache
-2. Wait 2-3 minutes for GitHub Pages to update
-3. Check the `gh-pages` branch to verify the deployment
-
-### Issue: Build fails with OpenSSL error
-
-**Solution**: The project already uses `NODE_OPTIONS='--openssl-legacy-provider'` in the scripts. If you still have issues, try:
 ```bash
 export NODE_OPTIONS=--openssl-legacy-provider
-npm run build
 ```
 
-## 📞 Support
-
-For detailed information about the update scripts, see `scripts/README.md`
-
-## 📄 License
+## License
 
 This is a personal website. Please contact Rui Wang before reusing any content.
-
----
-
-**Last Updated**: January 2026

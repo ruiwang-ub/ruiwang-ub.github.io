@@ -1,0 +1,5 @@
+Welcome to my website! I’m Rui Wang, an assistant professor in the Department of Communication and Media at Loyola University Maryland. I earned my Ph.D. in communication from the University at Buffalo and my M.A. in communication from Rutgers University. One of my favorite parts of this job is taking a question from everyday life, studying it, and bringing it into the classroom.
+
+I’m curious about what happens between asking a question online and deciding what to believe. My research examines how AI and digital platforms shape the information people encounter and trust, and how political identities influence the way people engage with that information.
+
+I began teaching journalism and communication at Anhui Normal University. At Loyola, I teach undergraduate and graduate courses on digital media and emerging technologies. I love seeing what students do with an idea once they get to try it themselves. They might build a website, test a mobile app prototype, or trace an AI-generated answer back to its sources and decide whether those sources support it.
