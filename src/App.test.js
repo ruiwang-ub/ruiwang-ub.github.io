@@ -36,7 +36,6 @@ test("renders the homepage introduction, main links, and navigation", () => {
     "Home",
     "About Me",
     "Research",
-    "Current Projects",
     "Publication",
     "Teaching",
     "Teaching Philosophy",
@@ -57,7 +56,6 @@ test("opens the Research and Teaching dropdowns from their arrow buttons", () =>
   expect(research).toHaveAttribute("aria-expanded", "true");
   const researchMenu = document.getElementById(research.getAttribute("aria-controls"));
   expect(within(researchMenu).getAllByRole("link").map((link) => link.getAttribute("href"))).toEqual([
-    "/research/current-projects/",
     "/publication/",
   ]);
 
@@ -133,6 +131,22 @@ test("opens the Google Scholar button on Publication in a new tab", () => {
   const scholar = screen.getByRole("link", { name: "View my Google Scholar profile (opens in a new tab)" });
   expect(scholar).toHaveAttribute("target", "_blank");
   expect(scholar).toHaveAttribute("rel", "noopener noreferrer");
+});
+
+test("keeps Current Projects hidden: not linked anywhere and its address shows Page not found", () => {
+  window.history.pushState({}, "", "/research/current-projects/");
+  render(<App />);
+
+  expect(screen.getByRole("heading", { level: 1, name: "Page not found" })).toBeInTheDocument();
+  expect(document.querySelector('a[href="/research/current-projects/"]')).toBeNull();
+});
+
+test("lists only Publication on the Research landing page while Current Projects is hidden", () => {
+  window.history.pushState({}, "", "/research/");
+  render(<App />);
+
+  const list = document.querySelector(".link-list");
+  expect(within(list).getAllByRole("link").map((link) => link.textContent)).toEqual(["Publication"]);
 });
 
 test("shows the CV online with a Download button to the Google Drive link", () => {

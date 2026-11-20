@@ -19,6 +19,7 @@
   },
   {
     "key": "currentProjects",
+    "hidden": true,
     "path": "/research/current-projects/",
     "title": "Current Projects | Rui Wang",
     "description": "Current projects: auditing AI search citations, testing how readers judge AI answers, AI disclosure in news, and political identity in Reddit discussions."

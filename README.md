@@ -37,6 +37,10 @@ The site runs at [http://localhost:3001](http://localhost:3001). `npm start` als
 | Page titles and search descriptions | `src/config/routes.json` |
 | Production domain for canonical URLs and the sitemap | `src/config/site.json` and `public/robots.txt` |
 
+### Hiding a page
+
+To take a page offline without deleting it, add `"hidden": true` to its entry in `src/config/routes.json`. The page disappears from the menus, the Research and Teaching landing pages, the sitemap, and the build, and its address shows the "Page not found" page. Its code and copy stay in the repo, so removing the flag brings it back. Current Projects is hidden this way.
+
 ### News entries
 
 Each entry has a `date`, a `category`, a `headline`, one sentence of `text`, and an optional `link` with a `label` and `url`.

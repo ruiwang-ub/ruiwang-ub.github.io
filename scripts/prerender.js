@@ -4,7 +4,7 @@ const fs = require("fs");
 const http = require("http");
 const path = require("path");
 const puppeteer = require("puppeteer");
-const routes = require("../src/config/routes.json");
+const routes = require("../src/config/routes.json").filter((route) => !route.hidden);
 const site = require("../src/config/site.json");
 
 const buildDir = path.resolve(__dirname, "../build");
