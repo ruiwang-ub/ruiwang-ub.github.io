@@ -22,3 +22,4 @@ yarn-error.log*
 .env
 
 /src/content/pages.generated.js
+/src/content/scholar.generated.json

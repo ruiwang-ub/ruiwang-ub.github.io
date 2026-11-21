@@ -23,13 +23,11 @@ const profile = {
     {
       id: "linkedin",
       label: "LinkedIn",
-      url: "https://www.linkedin.com/in/rui-wang1993/",
+      url: "https://www.linkedin.com/in/rui-wang-comm/",
     },
   ],
   scholar: {
     url: "https://scholar.google.com/citations?user=ZysUK0kAAAAJ&hl=en",
-    citationTotal: null,
-    citationsAsOf: "",
   },
   headshot: {
     src: "/images/rui-wang-640.jpg",

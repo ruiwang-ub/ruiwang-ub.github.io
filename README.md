@@ -27,7 +27,7 @@ The site runs at [http://localhost:3001](http://localhost:3001). `npm start` als
 | --- | --- |
 | Recent News (the eight newest show on the home page) | `src/content/news.js` |
 | Courses | `src/content/courses.js` |
-| Google Scholar citation total and date | `src/content/profile.js` (`scholar.citationTotal`, `scholar.citationsAsOf`) |
+| Google Scholar citations and h-index on the Research page | Read automatically from the Scholar profile in `src/content/profile.js`; see [Google Scholar numbers](#google-scholar-numbers) |
 | Name, title (`honorific`), role, email, profile links, faculty profile, headshot | `src/content/profile.js` |
 | CV link (Google Drive), shown on the CV page and used by its Download button | `src/content/profile.js` (`cvUrl`) |
 | Publications grouped by research area | `src/content/publications.js` |
@@ -54,19 +54,11 @@ Each entry has a `date`, a `category`, a `headline`, one sentence of `text`, and
 
 Each course has a `title`, an optional `code`, a `role`, its `semesters`, and, for Loyola courses, a one-line `summary`. Write semesters compactly: `F` for Fall or `S` for Spring plus the two-digit year, such as `"F25, S26, F26"`. Notes go in parentheses, such as `"S27 (planned)"` or `"F22, S23 (lecturer), S22 (teaching assistant)"`. Set `inDevelopment: true` to list a Loyola course under In development.
 
-### Citation total
+### Google Scholar numbers
 
-Fill in both fields to show "{total} citations · as of {Month YYYY}" on the Publication page:
+The Research page shows the citation count and h-index from the Google Scholar profile linked in `src/content/profile.js`, with the date they were read. Google Scholar has no public API, and browsers can't load its pages from another site, so the numbers are read when the site is built, not while someone views the page. `npm start`, `npm run build`, and `npm run deploy` first run `scripts/fetch-scholar.js`, which saves the numbers to `src/content/scholar.generated.json` (not committed). The live site picks up new numbers each time you publish. To refresh them without building, run `npm run scholar`.
 
-```js
-scholar: {
-  url: "https://scholar.google.com/citations?user=ZysUK0kAAAAJ&hl=en",
-  citationTotal: 172,
-  citationsAsOf: "2026-11",
-},
-```
-
-Leave `citationTotal: null` or `citationsAsOf: ""` to hide the line. The Google Scholar link always shows.
+If Google Scholar can't be reached or its page layout changes, the script keeps the last numbers saved on that computer, or leaves the numbers off the Research page if there are none. The build carries on either way. Tests never contact Google Scholar.
 
 ### Email address
 
@@ -86,7 +78,7 @@ for size in 320 640 1024; do sips -Z $size --setProperty formatOptions 62 src/As
 npm run build
 ```
 
-This builds the app into `build/`, then `scripts/prerender.js` saves each page listed in `src/config/routes.json` as `build/<route>/index.html` and writes `build/404.html`, `build/sitemap.xml`, and `build/thumbnail.png`. Canonical URLs end in a slash (for example `https://ruiwangcomm.com/about/`) because GitHub Pages serves each page from its own folder.
+This reads the latest [Google Scholar numbers](#google-scholar-numbers), builds the app into `build/`, then `scripts/prerender.js` saves each page listed in `src/config/routes.json` as `build/<route>/index.html` and writes `build/404.html`, `build/sitemap.xml`, and `build/thumbnail.png`. Canonical URLs end in a slash (for example `https://ruiwangcomm.com/about/`) because GitHub Pages serves each page from its own folder.
 
 ## Tests
 
@@ -111,10 +103,11 @@ This builds the site, copies `CNAME` into `build/`, and publishes `build/` to th
 | `npm test` | Run the tests |
 | `npm run deploy` | Build and publish to GitHub Pages |
 | `npm run content` | Regenerate `src/content/pages.generated.js` from the Markdown files |
+| `npm run scholar` | Refresh the Google Scholar citations and h-index shown on the Research page |
 
 ## Google Scholar data scripts
 
-`npm run update-all` still fetches Google Scholar data through SerpAPI into `src/data/scholar-data.json` and `src/Constants.js`, but the redesigned site no longer reads those files. The scripts need a `SERPAPI_KEY` in `.env`, which must never be committed. See `scripts/README.md`.
+`npm run update-all` still fetches Google Scholar data through SerpAPI into `src/data/scholar-data.json` and `src/Constants.js`, but the redesigned site no longer reads those files. The scripts need a `SERPAPI_KEY` in `.env`, which must never be committed. See `scripts/README.md`. The numbers on the Research page come from `npm run scholar` instead, which needs no key.
 
 ## Troubleshooting
 

@@ -26,26 +26,6 @@ const news = [
     },
   },
   {
-    date: "2026-08-06",
-    category: "conference",
-    headline: "AI journalism transparency at AEJMC",
-    text: "Our poster in New Orleans examined how explaining AI use and editorial oversight can shape audiences’ responses to AI-assisted journalism.",
-    link: {
-      label: "Conference program",
-      url: "https://www.aejmc.org/events/event-description?CalendarEventKey=53ba3b9d-9337-40cb-a227-019e3cb6c236&Home=%2Fhome",
-    },
-  },
-  {
-    date: "2026-06-06",
-    category: "conference",
-    headline: "AI fact-checking at ICA",
-    text: "My study with Yotam Ophir on fact-checking, political identity, and trust in journalism was on the ICA conference program in Cape Town.",
-    link: {
-      label: "Conference program",
-      url: "https://www.icahdq.org/mpage/ICA26-program",
-    },
-  },
-  {
     date: "2026-05-29",
     category: "publication",
     headline: "How a scientific controversy traveled across media",
@@ -76,12 +56,6 @@ const news = [
     category: "grant",
     headline: "Course Development Grant",
     text: "I received a Course Development Grant from Loyola University Maryland’s Office of Peace and Justice.",
-  },
-  {
-    date: "2025-06",
-    category: "conference",
-    headline: "ICA 2025 in Denver",
-    text: "I presented our paper on the politicization of AI discourse across platforms at ICA in Denver and served as conference coordinator for the ICA Preconference Digital Asia for the third year.",
   },
   {
     date: "2025-05",
@@ -118,12 +92,6 @@ const news = [
     category: "appointment",
     headline: "Joining Loyola University Maryland",
     text: "I accepted a tenure-track Assistant Professor position in the Department of Communication and Media at Loyola University Maryland.",
-  },
-  {
-    date: "2025-01",
-    category: "conference",
-    headline: "Two papers accepted at ICA 2025",
-    text: "Two of our papers were accepted for presentation at the 2025 ICA Annual Conference in Denver, Colorado.",
   },
 ];
 

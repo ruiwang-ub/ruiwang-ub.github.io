@@ -1,6 +1,8 @@
 import { fireEvent, render, screen, within } from "@testing-library/react";
 import App from "./App";
 
+jest.mock("./content/scholar.generated.json", () => ({ citations: 1234, hIndex: 8, updated: "2026-11-20" }));
+
 const ICON_NAMES = [
   "ResearchGate (opens in a new tab)",
   "Google Scholar (opens in a new tab)",
@@ -84,7 +86,7 @@ test("shows the four profile icons under the headshot, linked to their destinati
   expect(links.map((link) => link.getAttribute("href"))).toEqual([
     "https://www.researchgate.net/profile/Rui-Wang-23",
     "https://scholar.google.com/citations?user=ZysUK0kAAAAJ&hl=en",
-    "https://www.linkedin.com/in/rui-wang1993/",
+    "https://www.linkedin.com/in/rui-wang-comm/",
     "/contact/",
   ]);
   links.forEach((link) => expect(link.querySelector("svg")).not.toBeNull());
@@ -141,6 +143,26 @@ test("keeps Current Projects hidden: not linked anywhere and its address shows P
   expect(document.querySelector('a[href="/research/current-projects/"]')).toBeNull();
 });
 
+test("shows the Google Scholar citations and h-index on the Research page", () => {
+  window.history.pushState({}, "", "/research/");
+  render(<App />);
+
+  const stats = document.querySelector(".scholar-stats");
+  const items = Array.from(stats.querySelectorAll(".scholar-stats__item")).map((item) => [
+    item.querySelector("dt").textContent,
+    item.querySelector("dd").textContent,
+  ]);
+  expect(items).toEqual([
+    ["Citations", "1,234"],
+    ["h-index", "8"],
+  ]);
+  const source = within(stats).getByRole("link", { name: "Google Scholar (opens in a new tab)" });
+  expect(source).toHaveAttribute("href", "https://scholar.google.com/citations?user=ZysUK0kAAAAJ&hl=en");
+  expect(source).toHaveAttribute("target", "_blank");
+  expect(source).toHaveAttribute("rel", "noopener noreferrer");
+  expect(stats).toHaveTextContent("Google Scholar (opens in a new tab) · updated November 20, 2026");
+});
+
 test("lists only Publication on the Research landing page while Current Projects is hidden", () => {
   window.history.pushState({}, "", "/research/");
   render(<App />);
@@ -176,7 +198,7 @@ test("shows the email as rwang [at] loyola.edu and builds the mail link only on 
   expect(footerEmail.getAttribute("href")).toBe(["mailto:rwang", "loyola.edu"].join("@"));
 });
 
-test("shows the eight newest news entries, newest first", () => {
+test("shows the eight newest news entries, newest first, with no ICA or AEJMC entries", () => {
   render(<App />);
 
   const section = screen.getByRole("heading", { level: 2, name: "Recent News" }).closest("section");
@@ -185,5 +207,6 @@ test("shows the eight newest news entries, newest first", () => {
     .map((heading) => heading.textContent);
   expect(headlines).toHaveLength(8);
   expect(headlines[0]).toBe("Peer Reviewer Award");
-  expect(headlines[7]).toBe("Faculty Research Grant");
+  expect(headlines[7]).toBe("Political influencers and media bashing");
+  expect(document.querySelector("main").textContent).not.toMatch(/\bICA\b|AEJMC/);
 });

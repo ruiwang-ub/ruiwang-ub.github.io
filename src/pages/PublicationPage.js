@@ -4,11 +4,8 @@ import WorkEntry from "../components/WorkEntry";
 import { researchPages } from "../content/navigation";
 import profile from "../content/profile";
 import researchAreas from "../content/publications";
-import { citationSummary } from "../lib/citations";
 
 export default function PublicationPage() {
-  const summary = citationSummary(profile.scholar);
-
   return (
     <Page
       routeKey="publication"
@@ -20,7 +17,6 @@ export default function PublicationPage() {
           View my Google Scholar profile
           <span className="visually-hidden"> (opens in a new tab)</span>
         </a>
-        {summary ? <p className="scholar__count">{summary}</p> : null}
       </div>
       {researchAreas.map((area) => (
         <section className="area" key={area.id} aria-labelledby={area.id}>
